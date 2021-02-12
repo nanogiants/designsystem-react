@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-50.eot');
+  src: url('./fonts/cinderblock/cinderblock-50.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-50.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-50.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-50.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-50.svg#youworkforthem') format('svg');
+  font-weight: 50;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-75.eot');
+  src: url('./fonts/cinderblock/cinderblock-75.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-75.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-75.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-75.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-75.svg#youworkforthem') format('svg');
+  font-weight: 75;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-100.eot');
+  src: url('./fonts/cinderblock/cinderblock-100.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-100.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-100.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-100.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-100.svg#youworkforthem') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-125.eot');
+  src: url('./fonts/cinderblock/cinderblock-125.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-125.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-125.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-125.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-125.svg#youworkforthem') format('svg');
+  font-weight: 125;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-150.eot');
+  src: url('./fonts/cinderblock/cinderblock-150.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-150.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-150.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-150.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-150.svg#youworkforthem') format('svg');
+  font-weight: 150;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-175.eot');
+  src: url('./fonts/cinderblock/cinderblock-175.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-175.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-175.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-175.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-175.svg#youworkforthem') format('svg');
+  font-weight: 175;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-200.eot');
+  src: url('./fonts/cinderblock/cinderblock-200.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-200.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-200.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-200.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-200.svg#youworkforthem') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinderblock';
+  src: url('./fonts/cinderblock/cinderblock-400.eot');
+  src: url('./fonts/cinderblock/cinderblock-400.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/cinderblock/cinderblock-400.woff2') format('woff2'),
+    url('./fonts/cinderblock/cinderblock-400.woff') format('woff'),
+    url('./fonts/cinderblock/cinderblock-400.ttf') format('truetype'),
+    url('./fonts/cinderblock/cinderblock-400.svg#youworkforthem') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+/* ---------------- SHARP GROTESK ---------------- */
+@font-face {
+  font-family: 'SharpGroteskBook19';
+  src: url('./fonts/sharpgrotesk/SharpGroteskBook19.eot');
+  src: url('./fonts/sharpgrotesk/SharpGroteskBook19.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/sharpgrotesk/SharpGroteskBook19.woff2') format('woff2'),
+    url('./fonts/sharpgrotesk/SharpGroteskBook19.woff') format('woff'),
+    url('./fonts/sharpgrotesk/SharpGroteskBook19.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SharpGroteskMedium20';
+  src: url('./fonts/sharpgrotesk/SharpGroteskMedium20.eot');
+  src: url('./fonts/sharpgrotesk/SharpGroteskMedium20.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/sharpgrotesk/SharpGroteskMedium20.woff2') format('woff2'),
+    url('./fonts/sharpgrotesk/SharpGroteskMedium20.woff') format('woff'),
+    url('./fonts/sharpgrotesk/SharpGroteskMedium20.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SharpGroteskSmBold15';
+  src: url('./fonts/sharpgrotesk/SharpGroteskSmBold15.eot');
+  src: url('./fonts/sharpgrotesk/SharpGroteskSmBold15.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/sharpgrotesk/SharpGroteskSmBold15.woff2') format('woff2'),
+    url('./fonts/sharpgrotesk/SharpGroteskSmBold15.woff') format('woff'),
+    url('./fonts/sharpgrotesk/SharpGroteskSmBold15.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SharpGroteskSmBold19';
+  src: url('./fonts/sharpgrotesk/SharpGroteskSmBold19.eot');
+  src: url('./fonts/sharpgrotesk/SharpGroteskSmBold19.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/sharpgrotesk/SharpGroteskSmBold19.woff2') format('woff2'),
+    url('./fonts/sharpgrotesk/SharpGroteskSmBold19.woff') format('woff'),
+    url('./fonts/sharpgrotesk/SharpGroteskSmBold19.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NanoTextinput } from './Textinput';
 
 export default {
-  title: 'NanoTextInput',
+  title: 'Components/NanoTextInput',
 };
 
 export const Primary = () => {

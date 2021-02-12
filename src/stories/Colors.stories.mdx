@@ -1,20 +1,23 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { colors } from '../lib/theme/colors.ts';
 
 <Meta title="Styleguide/Colors" />
 
 # Colors
 
 <ColorPalette>
-  {/* {Object.keys(horbachTheme.properties).map(key => {
-    return (
-      <ColorItem
-        title={key.split('--')[1]}
-        colors={{
-          swisslife: swisslifeTheme.properties[key],
-          horbach: horbachTheme.properties[key],
-          tecis: tecisTheme.properties[key],
-        }}
-      />
+  {Object.keys(colors).reduce((acc, key) => {
+    acc.push(
+      ...Object.keys(colors[key]).map((colorName) => {
+        return (
+          <ColorItem
+            key={`${key}-${colorName}`}
+            title={`${key}-${colorName}`}
+            colors={[colors[key][colorName]]}
+          />
+        );
+      })
     );
-  })} */}
+    return acc;
+  }, [])}
 </ColorPalette>

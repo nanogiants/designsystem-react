@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NanoDropdown } from './Dropdown';
 
 export default {
-  title: 'NanoDropdown',
+  title: 'Components/NanoDropdown',
 };
 
 export const Primary = () => {

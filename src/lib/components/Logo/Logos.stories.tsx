@@ -1,32 +1,102 @@
 import React from 'react';
-import { NanoButton, SharedButtonVariants } from './Button';
+import { colors } from '../../theme/colors';
+import {
+  NanoLogo,
+  NanoLogoSize,
+  NanoLogoVariant,
+  Props as NanoLogoProps,
+} from './Logo';
 
 export default {
-  title: 'Button',
+  title: 'Components/Logo',
+  component: NanoLogo,
   argTypes: {
-    disabled: {
-      control: {
-        type: 'boolean',
-      },
-    },
     variant: {
       control: {
         type: 'select',
-        options: [SharedButtonVariants.PRIMARY, SharedButtonVariants.SECONDARY],
+        options: [
+          NanoLogoVariant.CLAIM_BLUE,
+          NanoLogoVariant.CLAIM_BLACK,
+          NanoLogoVariant.CLAIM_WHITE,
+          NanoLogoVariant.CLAIM_BLUE_RED,
+          NanoLogoVariant.WORD_BRAND_ONLY_BLUE,
+          NanoLogoVariant.WORD_BRAND_ONLY_BLACK,
+          NanoLogoVariant.WORD_BRAND_ONLY_WHITE,
+          NanoLogoVariant.IMAGE_BRAND_ONLY_BLUE,
+          NanoLogoVariant.IMAGE_BRAND_ONLY_BLACK,
+          NanoLogoVariant.IMAGE_BRAND_ONLY_WHITE,
+          NanoLogoVariant.IMAGE_BRAND_ONLY_RED,
+          NanoLogoVariant.ONE_LINER_BLUE,
+          NanoLogoVariant.ONE_LINER_BLACK,
+          NanoLogoVariant.ONE_LINER_WHITE,
+          NanoLogoVariant.TWO_LINER_BLUE,
+          NanoLogoVariant.TWO_LINER_BLACK,
+          NanoLogoVariant.TWO_LINER_WHITE,
+        ],
       },
     },
   },
 };
 
-const Template = (args) => <NanoButton {...args} />;
+const Template = (args: NanoLogoProps) => <NanoLogo {...args} />;
 
-export const Primary = Template.bind({});
+export const Logo = Template.bind({});
 
-Primary.args = {
-  variant: SharedButtonVariants.PRIMARY,
-  children: 'Button',
+Logo.args = {
+  variant: NanoLogoVariant.CLAIM_BLUE,
+  size: NanoLogoSize.MEDIUM,
 };
 
-export const Secondary = () => (
-  <NanoButton variant={SharedButtonVariants.SECONDARY}>Button</NanoButton>
-);
+const SizesTemplate = (args: NanoLogoProps) => {
+  return (
+    <div>
+      <NanoLogo {...args} size={NanoLogoSize.SMALL} />
+      <NanoLogo {...args} size={NanoLogoSize.MEDIUM} />
+      <NanoLogo {...args} size={NanoLogoSize.LARGE} />
+    </div>
+  );
+};
+
+export const Sizes = SizesTemplate.bind({});
+
+Sizes.args = {
+  variant: NanoLogoVariant.CLAIM_BLUE,
+};
+
+Sizes.parameters = {
+  docs: {
+    storyDescription: '3 sizes are supported.',
+  },
+};
+
+Sizes.title = 'Components/Logo/Sizes';
+
+Sizes.argTypes = {
+  variant: {
+    control: {
+      type: 'select',
+      options: [
+        NanoLogoVariant.CLAIM_BLUE,
+        NanoLogoVariant.CLAIM_BLACK,
+        NanoLogoVariant.CLAIM_WHITE,
+        NanoLogoVariant.CLAIM_BLUE_RED,
+        NanoLogoVariant.WORD_BRAND_ONLY_BLUE,
+        NanoLogoVariant.WORD_BRAND_ONLY_BLACK,
+        NanoLogoVariant.WORD_BRAND_ONLY_WHITE,
+        NanoLogoVariant.IMAGE_BRAND_ONLY_BLUE,
+        NanoLogoVariant.IMAGE_BRAND_ONLY_BLACK,
+        NanoLogoVariant.IMAGE_BRAND_ONLY_WHITE,
+        NanoLogoVariant.IMAGE_BRAND_ONLY_RED,
+        NanoLogoVariant.ONE_LINER_BLUE,
+        NanoLogoVariant.ONE_LINER_BLACK,
+        NanoLogoVariant.ONE_LINER_WHITE,
+        NanoLogoVariant.TWO_LINER_BLUE,
+        NanoLogoVariant.TWO_LINER_BLACK,
+        NanoLogoVariant.TWO_LINER_WHITE,
+      ],
+    },
+  },
+  size: {
+    control: false,
+  },
+};

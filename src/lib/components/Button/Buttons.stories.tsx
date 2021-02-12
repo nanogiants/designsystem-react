@@ -2,7 +2,7 @@ import React from 'react';
 import { NanoButton, SharedButtonVariants } from './Button';
 
 export default {
-  title: 'Button',
+  title: 'Components/Button',
   argTypes: {
     disabled: {
       control: {

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { colors } from '../../theme/colors';
 import { LogoClaim } from './LogoClaim';
@@ -9,8 +9,7 @@ import { LogoTwoLiner } from './LogoTwoLiner';
 import { LogoWordBrandOnly } from './LogoWordBrandOnly';
 
 export interface LogoProps {
-  width?: number;
-  height?: number;
+  size?: NanoLogoSize;
   fill?: string;
 }
 
@@ -38,75 +37,154 @@ export enum NanoLogoVariant {
   TWO_LINER_WHITE = 'TWO_LINER_WHITE',
 }
 
-interface Props {
+export enum NanoLogoSize {
+  SMALL = 'SMALL',
+  MEDIUM = 'MEDIUM',
+  LARGE = 'LARGE',
+}
+
+export interface Props {
+  size?: NanoLogoSize;
   variant?: NanoLogoVariant;
 }
 
-const NanoLogoWrapper = styled.div`
-  padding: 10px;
+const mapLogoSize = (size: NanoLogoSize): number => {
+  switch (size) {
+    case NanoLogoSize.SMALL:
+      return 0.5;
+      break;
+    case NanoLogoSize.LARGE:
+      return 1.5;
+      break;
+    default:
+      return 1;
+      break;
+  }
+};
+
+const NanoLogoWrapper = styled.div<Props>`
+  ${(props: Props) => {
+    // CLAIM LOGO
+    if (
+      [
+        NanoLogoVariant.CLAIM_BLACK,
+        NanoLogoVariant.CLAIM_BLUE,
+        NanoLogoVariant.CLAIM_WHITE,
+        NanoLogoVariant.CLAIM_BLUE_RED,
+      ].includes(props.variant)
+    ) {
+      return css`
+        padding: ${56 * mapLogoSize(props.size)}px;
+      `;
+    }
+    // TWO LINER LOGO
+    if (
+      [
+        NanoLogoVariant.TWO_LINER_BLUE,
+        NanoLogoVariant.TWO_LINER_BLACK,
+        NanoLogoVariant.TWO_LINER_WHITE,
+      ].includes(props.variant)
+    ) {
+      return css`
+        padding: ${56 * mapLogoSize(props.size)}px;
+      `;
+    }
+    // WORD BRAND ONLY LOGO
+    if (
+      [
+        NanoLogoVariant.WORD_BRAND_ONLY_BLACK,
+        NanoLogoVariant.WORD_BRAND_ONLY_BLUE,
+        NanoLogoVariant.WORD_BRAND_ONLY_WHITE,
+      ].includes(props.variant)
+    ) {
+      return css`
+        padding: ${48 * mapLogoSize(props.size)}px;
+      `;
+    }
+    // ONE LINER AND IMAGE BRAND ONLY LOGO
+    return css`
+      padding: ${58 * mapLogoSize(props.size)}px;
+    `;
+  }};
 `;
 
-const getLogoComponent = (variant: NanoLogoVariant): JSX.Element => {
+const getLogoComponent = (
+  variant: NanoLogoVariant,
+  size: NanoLogoSize
+): JSX.Element => {
   switch (variant) {
     case NanoLogoVariant.CLAIM_BLUE:
-      return <LogoClaim />;
+      return <LogoClaim size={size} />;
       break;
     case NanoLogoVariant.CLAIM_BLACK:
-      return <LogoClaim fill={colors.primary.black} />;
-      break;
-    case NanoLogoVariant.CLAIM_WHITE:
-      return <LogoClaim fill={colors.primary.white} />;
+      return (
+        <LogoClaim
+          fill={colors.primary.black}
+          fillSubtitle={colors.primary.black}
+          size={size}
+        />
+      );
       break;
     case NanoLogoVariant.CLAIM_WHITE:
       return (
         <LogoClaim
+          fill={colors.primary.white}
+          fillSubtitle={colors.primary.white}
+          size={size}
+        />
+      );
+      break;
+    case NanoLogoVariant.CLAIM_BLUE_RED:
+      return (
+        <LogoClaim
           fill={colors.primary.nanoblue}
           fillSubtitle={colors.primary.giantred}
+          size={size}
         />
       );
       break;
 
     case NanoLogoVariant.WORD_BRAND_ONLY_BLUE:
-      return <LogoWordBrandOnly />;
+      return <LogoWordBrandOnly size={size} />;
       break;
     case NanoLogoVariant.WORD_BRAND_ONLY_BLACK:
-      return <LogoWordBrandOnly fill={colors.primary.black} />;
+      return <LogoWordBrandOnly fill={colors.primary.black} size={size} />;
       break;
     case NanoLogoVariant.WORD_BRAND_ONLY_WHITE:
-      return <LogoWordBrandOnly fill={colors.primary.white} />;
+      return <LogoWordBrandOnly fill={colors.primary.white} size={size} />;
       break;
 
     case NanoLogoVariant.IMAGE_BRAND_ONLY_BLUE:
-      return <LogoImageBrandOnly />;
+      return <LogoImageBrandOnly size={size} />;
       break;
     case NanoLogoVariant.IMAGE_BRAND_ONLY_BLACK:
-      return <LogoImageBrandOnly fill={colors.primary.black} />;
+      return <LogoImageBrandOnly fill={colors.primary.black} size={size} />;
       break;
     case NanoLogoVariant.IMAGE_BRAND_ONLY_WHITE:
-      return <LogoImageBrandOnly fill={colors.primary.white} />;
+      return <LogoImageBrandOnly fill={colors.primary.white} size={size} />;
       break;
     case NanoLogoVariant.IMAGE_BRAND_ONLY_RED:
-      return <LogoImageBrandOnly fill={colors.primary.giantred} />;
+      return <LogoImageBrandOnly fill={colors.primary.giantred} size={size} />;
       break;
 
     case NanoLogoVariant.ONE_LINER_BLUE:
-      return <LogoOneLiner />;
+      return <LogoOneLiner size={size} />;
       break;
     case NanoLogoVariant.ONE_LINER_BLACK:
-      return <LogoOneLiner fill={colors.primary.black} />;
+      return <LogoOneLiner fill={colors.primary.black} size={size} />;
       break;
     case NanoLogoVariant.ONE_LINER_WHITE:
-      return <LogoOneLiner fill={colors.primary.white} />;
+      return <LogoOneLiner fill={colors.primary.white} size={size} />;
       break;
 
     case NanoLogoVariant.TWO_LINER_BLUE:
-      return <LogoTwoLiner />;
+      return <LogoTwoLiner size={size} />;
       break;
     case NanoLogoVariant.TWO_LINER_BLACK:
-      return <LogoTwoLiner fill={colors.primary.black} />;
+      return <LogoTwoLiner fill={colors.primary.black} size={size} />;
       break;
     case NanoLogoVariant.TWO_LINER_WHITE:
-      return <LogoTwoLiner fill={colors.primary.white} />;
+      return <LogoTwoLiner fill={colors.primary.white} size={size} />;
       break;
 
     default:
@@ -114,10 +192,22 @@ const getLogoComponent = (variant: NanoLogoVariant): JSX.Element => {
   }
 };
 
+/**
+ * Unser Markenname bringt unsere Mission auf den Punkt: from Nano to Giant. Selbstbestimmt wachsen.
+ * Der Name gesetzt in der Hausschrift in Kombination mit unserer Bildmarke – dem Transformierungspfeil –
+ * verdichtet unser Credo in einem einfachen, klaren Bild: dem NanoGiants Logo.
+ */
+
 export const NanoLogo: FunctionComponent<Props> = (props) => {
+  /**
+   * Checks if the button should be disabled
+   */
   const variant = props.variant || NanoLogoVariant.CLAIM_BLUE;
+  const size = props.size || NanoLogoSize.MEDIUM;
 
   return (
-    <NanoLogoWrapper {...props}>{getLogoComponent(variant)}</NanoLogoWrapper>
+    <NanoLogoWrapper {...props}>
+      {getLogoComponent(variant, size)}
+    </NanoLogoWrapper>
   );
 };

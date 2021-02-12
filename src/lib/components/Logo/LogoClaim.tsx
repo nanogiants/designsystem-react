@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { LogoProps } from './Logo';
+import { LogoProps, NanoLogoSize } from './Logo';
 
 export interface LogoClaimProps extends LogoProps {
   fillSubtitle?: string;
@@ -8,16 +8,31 @@ export interface LogoClaimProps extends LogoProps {
 export const LogoClaim: FunctionComponent<LogoClaimProps> = (
   props: LogoClaimProps
 ) => {
-  const { width, height, fill, fillSubtitle } = props;
+  const { size, fill, fillSubtitle } = props;
+
+  const getHeightFromSize = (size: NanoLogoSize): string => {
+    switch (size) {
+      case NanoLogoSize.SMALL:
+        return '56px';
+        break;
+      case NanoLogoSize.LARGE:
+        return '224px';
+        break;
+      default:
+        return '112px';
+        break;
+    }
+  };
   return (
     <svg
-      width={width ?? '514'}
-      height={height ?? '112'}
+      width="514"
+      height="112"
       viewBox="0 0 514 112"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ height: getHeightFromSize(size), width: 'auto' }}
     >
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path
           d="M73.15 94.04V88.43C73.15 76.69 79.27 70.23 89.54 70.23C98.78 70.23 104.23 74.99 105.08 84.41V84.92H99.58V84.4C99.01 78.28 95.84 74.93 89.54 74.93C82.4 74.93 78.54 79.75 78.54 88.71V93.81C78.54 102.43 82.34 106.96 89.54 106.96C95.95 106.96 99.18 103.33 99.75 97.09V96.41H105.31V97.15C104.52 106.51 99.36 111.95 89.32 111.95C78.99 111.96 73.15 105.95 73.15 94.04Z"
           fill={fillSubtitle ?? '#19194A'}
@@ -111,11 +126,6 @@ export const LogoClaim: FunctionComponent<LogoClaimProps> = (
           fill={fill ?? '#19194A'}
         />
       </g>
-      <defs>
-        <clipPath id="clip0">
-          <rect width="513.96" height="111.96" fill="white" />
-        </clipPath>
-      </defs>
     </svg>
   );
 };

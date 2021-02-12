@@ -1,19 +1,34 @@
 import React, { FunctionComponent } from 'react';
-import { LogoProps } from './Logo';
+import { LogoProps, NanoLogoSize } from './Logo';
 
 export const LogoWordBrandOnly: FunctionComponent<LogoProps> = (
   props: LogoProps
 ) => {
-  const { width, height, fill } = props;
+  const { size, fill } = props;
+
+  const getHeightFromSize = (size: NanoLogoSize): string => {
+    switch (size) {
+      case NanoLogoSize.SMALL:
+        return '24px';
+        break;
+      case NanoLogoSize.LARGE:
+        return '96px';
+        break;
+      default:
+        return '48px';
+        break;
+    }
+  };
   return (
     <svg
-      width={width ?? '328'}
-      height={height ?? '48'}
+      width="328"
+      height="48"
       viewBox="0 0 328 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ height: getHeightFromSize(size), width: 'auto' }}
     >
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path
           d="M0 46.88V6.45996H7.09L24.38 33.78L25.46 36.44L25.23 33.55V6.45996H32.26V46.88H25.4L7.88 19.21L6.75 16.55L7.03 19.38V46.87H0V46.88Z"
           fill={fill ?? '#19194A'}
@@ -55,16 +70,6 @@ export const LogoWordBrandOnly: FunctionComponent<LogoProps> = (
           fill={fill ?? '#19194A'}
         />
       </g>
-      <defs>
-        <clipPath id="clip0">
-          <rect
-            width="327.4"
-            height="46.77"
-            fill="white"
-            transform="translate(0 0.959961)"
-          />
-        </clipPath>
-      </defs>
     </svg>
   );
 };

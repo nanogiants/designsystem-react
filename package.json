@@ -9,16 +9,16 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./src/lib/assets --docs",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
-    "@storybook/addon-actions": "6.0.28",
-    "@storybook/addon-essentials": "6.0.28",
-    "@storybook/addon-links": "6.0.28",
-    "@storybook/react": "6.0.28",
+    "@storybook/addon-actions": "6.1.17",
+    "@storybook/addon-essentials": "6.1.17",
+    "@storybook/addon-links": "6.1.17",
+    "@storybook/react": "6.1.17",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@types/react": "^16.9.12",
@@ -26,14 +26,17 @@
     "@types/react-router-dom": "^5.1.7",
     "identity-obj-proxy": "^3.0.0",
     "node-sass": "^5.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "rollup": "^2.37.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-svgi": "^0.2.0",
     "rollup-plugin-typescript2": "^0.29.0",
-    "typescript": "^4.0.3",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "typescript": "^4.0.3"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

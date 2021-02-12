@@ -1,6 +1,7 @@
-export { NanoButton } from './Button/Button';
-export { NanoDropdown } from './Dropdown/Dropdown';
-export { NanoH1 } from './Headline/NgH1';
-export { NanoLink } from './Link/Link';
-export { NanoNavigation } from './Navigation/Navigation';
-export { NanoTextinput } from './Textinput/Textinput';
+export * from './Button/Button';
+export * from './Dropdown/Dropdown';
+export * from './Headline/Headline';
+export * from './Link/Link';
+export * from './Navigation/Navigation';
+export * from './Textinput/Textinput';
+export * from './Logo/Logo';

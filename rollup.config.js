@@ -39,12 +39,8 @@ export default {
     copy({
       targets: [
         {
-          src: [
-            'src/lib/assets/fonts/cinderblock',
-            'src/lib/assets/fonts/sharpgrotesk',
-            'src/lib/assets/fonts.scss',
-          ],
-          dest: './dist/assets/fonts',
+          src: ['src/lib/assets'],
+          dest: './dist',
         },
       ],
     }),

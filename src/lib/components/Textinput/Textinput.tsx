@@ -39,7 +39,7 @@ const Inner = styled.div<InnerProps>`
 `;
 
 const Input = styled.input`
-  font-family: SharpGrotesk;
+  font-family: 'SharpGroteskSmBold19';
   width: 100%;
   background-color: transparent;
   border: 0;
