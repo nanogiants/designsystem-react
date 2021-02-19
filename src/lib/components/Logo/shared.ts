@@ -4,6 +4,7 @@ export interface LogoProps {
 }
 
 export enum NanoLogoSize {
+  MAIN_NAV = "MAIN_NAV",
   SMALL = "SMALL",
   MEDIUM = "MEDIUM",
   LARGE = "LARGE",

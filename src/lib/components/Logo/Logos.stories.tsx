@@ -1,18 +1,14 @@
-import React from 'react';
-import {
-  NanoLogo,
-  NanoLogoVariant,
-  NanoLogoProps,
-} from './Logo';
-import { NanoLogoSize } from './shared';
+import React from "react";
+import { NanoLogo, NanoLogoVariant, NanoLogoProps } from "./Logo";
+import { NanoLogoSize } from "./shared";
 
 export default {
-  title: 'Components/Logo',
+  title: "Components/Logo",
   component: NanoLogo,
   argTypes: {
     variant: {
       control: {
-        type: 'select',
+        type: "select",
         options: [
           NanoLogoVariant.CLAIM_BLUE,
           NanoLogoVariant.CLAIM_BLACK,
@@ -34,6 +30,11 @@ export default {
         ],
       },
     },
+    removePadding: {
+      control: {
+        type: "boolean",
+      },
+    },
   },
 };
 
@@ -44,6 +45,7 @@ export const Logo = Template.bind({});
 Logo.args = {
   variant: NanoLogoVariant.CLAIM_BLUE,
   size: NanoLogoSize.MEDIUM,
+  removePadding: false,
 };
 
 const SizesTemplate = (args: NanoLogoProps) => {
@@ -64,16 +66,16 @@ Sizes.args = {
 
 Sizes.parameters = {
   docs: {
-    storyDescription: '3 sizes are supported.',
+    storyDescription: "3 sizes are supported.",
   },
 };
 
-Sizes.title = 'Components/Logo/Sizes';
+Sizes.title = "Components/Logo/Sizes";
 
 Sizes.argTypes = {
   variant: {
     control: {
-      type: 'select',
+      type: "select",
       options: [
         NanoLogoVariant.CLAIM_BLUE,
         NanoLogoVariant.CLAIM_BLACK,

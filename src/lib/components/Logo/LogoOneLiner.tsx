@@ -8,6 +8,8 @@ export const LogoOneLiner: FunctionComponent<LogoProps> = (
 
   const getHeightFromSize = (logoSize: NanoLogoSize): string => {
     switch (logoSize) {
+      case NanoLogoSize.MAIN_NAV:
+        return '26px';
       case NanoLogoSize.SMALL:
         return '29px';
       case NanoLogoSize.LARGE:
