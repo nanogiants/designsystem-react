@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NanoLogo, NanoLogoVariant, NanoLogoProps } from "./Logo";
 import { NanoLogoSize } from "./shared";
 

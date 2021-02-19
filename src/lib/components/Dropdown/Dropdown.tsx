@@ -1,5 +1,6 @@
 import React, { useState, ReactElement } from 'react';
 import styled, { css } from 'styled-components';
+
 import { ReactComponent as Arrow } from '../../assets/icons/arrow.svg';
 import { colors } from '../../theme/colors';
 

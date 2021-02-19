@@ -5,6 +5,7 @@ import { colors } from "../../theme/colors";
 import { NanoLink } from "../Link/Link";
 import { NanoLogo, NanoLogoVariant } from "../Logo/Logo";
 import { NanoLogoSize } from "../Logo/shared";
+
 import { NanoNavigationLink, NanoNavigationProps } from "./shared";
 
 const NanoNav = styled.nav<NanoNavigationProps>`

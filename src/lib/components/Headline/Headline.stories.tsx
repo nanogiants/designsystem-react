@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { NanoH1, NanoH2, NanoH3, NanoH4, NanoH5, NanoH6 } from './Headline';
 
 export default {

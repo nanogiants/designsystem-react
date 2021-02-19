@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import styled, { css } from "styled-components";
 
 import { colors } from "../../theme/colors";
+
 import { LogoClaim } from "./LogoClaim";
 import { LogoImageBrandOnly } from "./LogoImageBrandOnly";
 import { LogoOneLiner } from "./LogoOneLiner";

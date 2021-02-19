@@ -1,6 +1,7 @@
-import React, { useState, ReactElement, useEffect } from 'react';
-import { NanoDropdown, NanoDropdownProps } from './Dropdown';
 import { Story } from '@storybook/react/types-6-0';
+import React, { useState } from 'react';
+
+import { NanoDropdown, NanoDropdownProps } from './Dropdown';
 
 export default {
   title: 'Components/NanoDropdown',

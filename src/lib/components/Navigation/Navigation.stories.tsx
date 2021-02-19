@@ -1,8 +1,9 @@
+import { Story } from "@storybook/react/types-6-0";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+
 import { NanoNavigation } from "./Navigation";
 import { NanoNavigationLink, NanoNavigationProps } from "./shared";
-import { Story } from "@storybook/react/types-6-0";
 
 export default {
   title: "Components/Navigation",

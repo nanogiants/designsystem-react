@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+
 import { LogoProps, NanoLogoSize } from './shared';
 
 export const LogoImageBrandOnly: FunctionComponent<LogoProps> = (
