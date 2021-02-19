@@ -10,7 +10,7 @@
     "dev": "rollup -c -w",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006 -s ./src/lib/assets --docs",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook -s ./src/lib/assets"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
@@ -19,6 +19,7 @@
     "@storybook/addon-essentials": "6.1.17",
     "@storybook/addon-links": "6.1.17",
     "@storybook/react": "6.1.17",
+    "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@types/react": "^16.9.12",

@@ -1,6 +1,6 @@
 import React, { useState, ReactElement } from 'react';
 import styled, { css } from 'styled-components';
-
+import { ReactComponent as Arrow } from '../../assets/icons/arrow.svg';
 import { colors } from '../../theme/colors';
 
 const OFFSET_LEFT = 12;
@@ -11,21 +11,36 @@ interface InputContainerProps {
 
 const InputContainer = styled.div<InputContainerProps>`
   width: ${({ width }) => width || '240px'};
-  margin: 0 0 12px 0;
+  height: 63px;
   position: relative;
 `;
 
 interface InnerProps {
-  focussed?: boolean;
+  hasValue?: boolean;
   error?: boolean;
 }
 
+interface StyledArrowProps {
+  isOpen: boolean;
+}
+const StyledArrow = styled(Arrow)<StyledArrowProps>`
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      transform: rotate(180deg);
+    `}
+  transition: all 0.2s;
+`;
+
 const Inner = styled.div<InnerProps>`
+  cursor: pointer;
+
   position: relative;
-  padding: 16px 12px 8px ${OFFSET_LEFT}px;
-  border-bottom: ${({ focussed, error }) =>
+  margin-top: 10px;
+  height: 34px;
+  border-bottom: ${({ hasValue, error }) =>
     `2px solid ${
-      focussed
+      hasValue
         ? error
           ? colors.secondary.titanred
           : colors.secondary.microblue
@@ -35,8 +50,11 @@ const Inner = styled.div<InnerProps>`
 
 const Value = styled.div`
   font-family: SharpGrotesk;
-  width: 100%;
+  padding-left: ${OFFSET_LEFT + 2}px;
+  padding-right: 12px;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: transparent;
   border: 0;
@@ -51,7 +69,7 @@ const Value = styled.div`
 
 const Label = styled.label<any>`
   position: absolute;
-  top: 16px;
+  top: 2px;
   left: ${OFFSET_LEFT + 2}px;
   color: ${({ error }) =>
     error ? colors.secondary.titanred : colors.secondary.rapidgrey};
@@ -62,8 +80,8 @@ const Label = styled.label<any>`
   font-size: 16px;
   line-height: 26px;
 
-  ${({ required, hasContent }) =>
-    required && !hasContent
+  ${({ required }) =>
+    required
       ? css`
           &:after {
             content: '*';
@@ -75,8 +93,8 @@ const Label = styled.label<any>`
   ${({ hasContent }) =>
     hasContent &&
     css`
-      transform: translateY(-10px);
-      font-size: 10px;
+      transform: translateY(-12px);
+      font-size: 12px;
       line-height: 16px;
       font-weight: bold;
     `}
@@ -91,10 +109,11 @@ const Error = styled.div`
   font-weight: bold;
 `;
 
-interface Props<T> {
+export interface NanoDropdownProps<T> {
   label: string;
   error?: string;
   width?: string;
+  required?: boolean;
   value: T | null | undefined;
   values: {
     key: string;
@@ -103,66 +122,79 @@ interface Props<T> {
   onChange: (value: T) => void;
 }
 
-const Arrow = () => (
-  <svg
-    width="18"
-    height="10"
-    viewBox="0 0 18 10"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M8.99995 9.49995C8.80795 9.49995 8.61595 9.42645 8.4697 9.2802L0.439453 1.24995L1.49995 0.189453L8.99995 7.68945L16.5 0.189453L17.5605 1.24995L9.5302 9.2802C9.38395 9.42645 9.19195 9.49995 8.99995 9.49995Z"
-      fill="#222B45"
-    />
-  </svg>
-);
-
 export const NanoDropdown: <T = string>(
-  props: Props<T>
-) => ReactElement<Props<T>> = (props) => {
-  const { error, label, width, value, values, onChange } = props;
+  props: NanoDropdownProps<T>
+) => ReactElement<NanoDropdownProps<T>> = (props) => {
+  const { error, label, required, width, value, values, onChange } = props;
   const [isOpen, setOpen] = useState(false);
+
+  const hasValue = value !== undefined && value !== null;
+
+  const selectedKey = values.find((val) => val.value === value)?.key || '';
 
   return (
     <InputContainer width={width}>
-      <Inner error={Boolean(error)}>
+      <Inner error={Boolean(error)} hasValue={hasValue}>
         <Value onClick={() => setOpen(!isOpen)}>
-          <span>{value}</span>
-          <Arrow />
+          <span>{selectedKey}</span>
+          <StyledArrow
+            isOpen={isOpen}
+            stroke={
+              hasValue && Boolean(error)
+                ? colors.secondary.titanred
+                : colors.secondary.microblue
+            }
+          />
         </Value>
-        <Label hasContent={value !== undefined && value !== null} error={error}>
+        <Label hasContent={hasValue} error={error} required={required}>
           {label}
         </Label>
-      </Inner>
-      {isOpen && (
-        <Options>
+
+        <Options isOpen={isOpen}>
           {values.map(({ key, value }, i) => (
-            <div key={i} onClick={() => onChange(value)}>
+            <OptionItem
+              key={i}
+              onClick={() => {
+                setOpen(false);
+                onChange(value);
+              }}
+            >
               {key}
-            </div>
+            </OptionItem>
           ))}
         </Options>
-      )}
+      </Inner>
 
       {error && <Error>{error}</Error>}
     </InputContainer>
   );
 };
 
-const Options = styled.div`
+const OptionItem = styled.div`
+  display: flex;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid ${colors.secondary.rapidgrey};
+  padding-left: ${OFFSET_LEFT}px;
+  width: calc(100% - ${OFFSET_LEFT}px);
+`;
+
+interface OptionProps {
+  isOpen: boolean;
+}
+
+const Options = styled.div<OptionProps>`
   position: absolute;
   width: 100%;
   background-color: #ffffff;
-
-  border-radius: 4px;
+  /* background-color: black; */
+  border-radius: 0 0 4px 4px;
   z-index: 9;
-  margin-top: 10px;
-  max-height: 220px;
+  margin-top: 2px;
+  transition: max-height 0.2s;
+  max-height: ${({ isOpen }) => (isOpen ? '220px' : 0)};
   overflow: auto;
-  .option {
-    cursor: pointer;
-    padding: 12px 16px;
-    user-select: none;
-  }
+  scrollbar-width: 0;
 `;

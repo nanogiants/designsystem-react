@@ -1,31 +1,58 @@
-import React, { useState } from 'react';
-import { NanoDropdown } from './Dropdown';
+import React, { useState, ReactElement, useEffect } from 'react';
+import { NanoDropdown, NanoDropdownProps } from './Dropdown';
+import { Story } from '@storybook/react/types-6-0';
 
 export default {
   title: 'Components/NanoDropdown',
+  argTypes: {
+    value: { table: { disable: true } },
+    values: { table: { disable: true } },
+  },
 };
 
-export const Primary = () => {
-  const [dropdownValue, setDropdownValue] = useState<number | null>(null);
+const Template: Story<NanoDropdownProps<any>> = (props) => {
+  const [dropdownValue, setDropdownValue] = useState<any | null>(null);
+
   return (
-    <NanoDropdown<number>
-      label="Label"
+    <NanoDropdown<any>
+      {...props}
       value={dropdownValue}
-      values={[
-        {
-          key: 'test4',
-          value: 4,
-        },
-        {
-          key: 'test5',
-          value: 5,
-        },
-        {
-          key: 'test6',
-          value: 6,
-        },
-      ]}
       onChange={(value) => setDropdownValue(value)}
-    ></NanoDropdown>
+    />
   );
+};
+
+export const Primary: Story<NanoDropdownProps<number>> = Template.bind({});
+Primary.args = {
+  label: 'Label',
+  values: [
+    {
+      key: 'Hello',
+      value: 4,
+    },
+    {
+      key: 'You',
+      value: 5,
+    },
+    {
+      key: 'Beautiful',
+      value: 6,
+    },
+    {
+      key: 'Human',
+      value: 7,
+    },
+  ],
+};
+Primary.argTypes = {
+  error: {
+    control: {
+      type: 'text',
+    },
+  },
+  required: {
+    control: {
+      type: 'boolean',
+    },
+  },
 };
