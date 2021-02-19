@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { NanoDropdown, NanoDropdownProps } from './Dropdown';
 
 export default {
-  title: 'Components/NanoDropdown',
+  title: 'Components/Dropdown',
   argTypes: {
     value: { table: { disable: true } },
     values: { table: { disable: true } },

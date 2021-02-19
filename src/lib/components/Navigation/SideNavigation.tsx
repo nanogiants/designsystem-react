@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { NanoNavigationLink, NanoSideNavigationProps } from "./shared";
@@ -18,12 +19,13 @@ const NanoList = styled.ul`
   padding: 0;
 `;
 
-const NanoSideNavLink = styled.a`
+const NanoSideNavLink = styled(Link)`
   display: block;
   height: 12px;
   margin: 6px 0;
   position: relative;
   width: 64px;
+  text-decoration: none;
   &:after {
     cursor: pointer;
     background-color: #d90855;
@@ -78,6 +80,7 @@ export const NanoSideNavigation: FunctionComponent<NanoSideNavigationProps> = (
           <NanoSideNavLink
             key={"sidenav-" + link.title + index}
             className={link.active ? "active" : null}
+            to={link.path ?? "/#"}
           >
             <NanoSideNavTitle className="label">{link.title}</NanoSideNavTitle>
           </NanoSideNavLink>
