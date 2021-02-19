@@ -33,7 +33,7 @@ const NgLink = styled(Link)<NanoLinkProps>`
         `
       : ''}
 
-  font-family: SharpGrotesk;
+  font-family: SharpGroteskSmBold19;
   font-style: normal;
   font-weight: bold;
   width: fit-content;
