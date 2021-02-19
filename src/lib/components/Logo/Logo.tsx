@@ -36,6 +36,7 @@ export enum NanoLogoVariant {
 export interface NanoLogoProps {
   size?: NanoLogoSize;
   variant?: NanoLogoVariant;
+  removePadding?: boolean;
 }
 
 const mapLogoSize = (size: NanoLogoSize): number => {
@@ -51,6 +52,9 @@ const mapLogoSize = (size: NanoLogoSize): number => {
 
 const NanoLogoWrapper = styled.div<NanoLogoProps>`
   ${(props: NanoLogoProps) => {
+    if (props.removePadding) {
+      return;
+    }
     // CLAIM LOGO
     if (
       [
