@@ -2,6 +2,7 @@ import { Story } from "@storybook/react/types-6-0";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import { NanoBurgerNavigation } from "./BurgerNavigation";
 import { NanoNavigation } from "./Navigation";
 import { NanoSideNavigation } from "./SideNavigation";
 import {
@@ -32,15 +33,6 @@ export default {
     },
   },
 };
-const NavigationTemplate = (args: NanoNavigationProps) => (
-  <Router>
-    <NanoNavigation {...args} />
-  </Router>
-);
-
-export const Navigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
-  {}
-);
 
 const nanoNavigationLinks: NanoNavigationLink[] = [
   {
@@ -85,11 +77,23 @@ const nanoNavigationLinks: NanoNavigationLink[] = [
   },
 ];
 
+/* Simple Navigation */
+const NavigationTemplate = (args: NanoNavigationProps) => (
+  <Router>
+    <NanoNavigation {...args} />
+  </Router>
+);
+
+export const Navigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
+  {}
+);
+
 Navigation.args = {
   variant: "sm",
   links: nanoNavigationLinks,
 };
 
+/* Main Navigation*/
 export const MainNavigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
   {}
 );
@@ -102,6 +106,8 @@ MainNavigation.args = {
   showLogo: true,
   logoPath: "/#",
 };
+
+/* Side Navigation */
 const SideNavigationTemplate = (args: NanoSideNavigationProps) => (
   <Router>
     <NanoSideNavigation {...args} />
@@ -118,3 +124,21 @@ SideNavigation.argTypes = {
   logoPath: { table: { disable: true } },
 };
 SideNavigation.args = { links: nanoNavigationLinks };
+
+/* Burger Navigation */
+const BurgerNavigationTemplate = (args: NanoNavigationProps) => (
+  <Router>
+    <NanoBurgerNavigation {...args} />
+  </Router>
+);
+
+export const BurgerNavigation: Story<NanoNavigationProps> = BurgerNavigationTemplate.bind(
+  {}
+);
+
+BurgerNavigation.argTypes = {
+  showLogo: { table: { disable: true } },
+  variant: { table: { disable: true } },
+  logoPath: { table: { disable: true } },
+};
+BurgerNavigation.args = { links: nanoNavigationLinks };
