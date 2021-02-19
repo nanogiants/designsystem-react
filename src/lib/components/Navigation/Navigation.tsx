@@ -68,9 +68,8 @@ export const NanoNavigation: FunctionComponent<NanoNavigationProps> = (
           <NanoListItem key={"nano-navigation-" + link.title + index}>
             <NanoLink
               to={link.path}
-              inactive={!link.active}
               variant={variant}
-              noBorder={true}
+              noBorder={!link.active}
               isNavLink={true}
             >
               {link.title}

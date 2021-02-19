@@ -6,14 +6,14 @@ import { colors } from '../../theme/colors';
 
 export type Variants = 'sm' | 'lg';
 
-interface NanoLinkProps {
+interface NgLinkProps {
   variant?: Variants;
   inactive?: boolean;
   noBorder?: boolean;
   isNavLink?: boolean;
 }
 
-const NgLink = styled(Link)<NanoLinkProps>`
+const NgLink = styled(Link)<NgLinkProps>`
   color: ${({ isNavLink, inactive }) =>
     isNavLink
       ? colors.primary.white
@@ -26,8 +26,8 @@ const NgLink = styled(Link)<NanoLinkProps>`
       inactive ? colors.secondary.slowgrey : colors.primary.giantred
     }`};
 
-  ${({ noBorder, inactive }) =>
-    noBorder && inactive
+  ${({ noBorder }) =>
+    noBorder
       ? css`
           border-bottom: none;
         `
@@ -89,7 +89,7 @@ const LinkWrapper = styled.div`
   width: fit-content;
 `;
 
-interface Props extends LinkProps {
+export interface NanoLinkProps extends LinkProps {
   variant?: Variants;
   inactive?: boolean;
   children?: ReactNode;
@@ -97,7 +97,7 @@ interface Props extends LinkProps {
   isNavLink?: boolean;
 }
 
-export const NanoLink: FunctionComponent<Props> = (props) => {
+export const NanoLink: FunctionComponent<NanoLinkProps> = (props) => {
   const { variant, inactive, noBorder, to, isNavLink } = props;
 
   const navLinkContent = (
