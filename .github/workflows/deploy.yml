@@ -1,0 +1,114 @@
+name: 'Deploy Library and Storybook'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install_deps:
+    name: 'Setup'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm i
+
+  lint:
+    name: 'Lint'
+    runs-on: ubuntu-latest
+    needs: install_deps
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Lint Projectfiles
+        run: npm run lint
+
+  build_deploy_storybook:
+    name: 'Build & Deploy Storybook'
+    runs-on: ubuntu-latest
+    needs: [install_deps, lint]
+    steps:
+      - name: Checking out repository
+        uses: actions/checkout@v1
+      - name: Checking out node package
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Building Storybook
+        run: npm run build:storybook
+      - name: Install SSH key of Webdev Server
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY_WEBDEV_SERVER }}
+          name: id_rsa-webdev
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS_WEBDEV_SERVER }}
+          config: |
+            Host webdev
+              HostName ${{ secrets.SSH_HOST_WEBDEV_SERVER }}
+              User ${{ secrets.SSH_USER_WEBDEV_SERVER }}
+              IdentityFile ~/.ssh/id_rsa-webdev
+      - name: Clean Destination Directory
+        run: ssh webdev "find /var/www/nanogiants-designsystem-react -type f -not -name '.htpasswd' -delete"
+      - name: Copy files via scp
+        run: scp -r storybook-static/* webdev:/var/www/nanogiants-designsystem-react
+
+  build_deploy_library:
+    name: 'Build & Deploy Library'
+    runs-on: ubuntu-latest
+    needs: [install_deps, lint]
+    steps:
+      - name: Checking out repository
+        uses: actions/checkout@v1
+      - name: Checking out node package
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Build Library
+        run: npm run build
+      - name: Get package.json Version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+      - name: Echo package.json version
+        run: echo "${{ steps.package-version.outputs.current-version }}"
+      - name: Publish to Npm
+        id: publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          check-version: true
+      - name: Show version change
+        if: steps.publish.outputs.type != 'none'
+        run: |
+          echo "Version changed: ${{ steps.publish.outputs.old-version }} => ${{ steps.publish.outputs.version }}"
