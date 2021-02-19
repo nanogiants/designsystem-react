@@ -1,34 +1,29 @@
-import React, { FunctionComponent } from 'react';
-import styled from 'styled-components';
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 
-import { colors } from '../../theme/colors';
-import { NanoLink, Variants } from '../Link/Link';
+import { colors } from "../../theme/colors";
+import { NanoLink } from "../Link/Link";
+import { NanoLogo, NanoLogoVariant } from "../Logo/Logo";
+import { NanoLogoSize } from "../Logo/shared";
+import { NanoNavigationLink, NanoNavigationProps } from "./shared";
 
-export interface NanoNavigationLink {
-  path: string;
-  title: string;
-  active: boolean;
-}
-
-interface Props {
-  links: NanoNavigationLink[];
-  variant: Variants;
-}
-
-const NanoNav = styled.nav<Props>`
+const NanoNav = styled.nav<NanoNavigationProps>`
   display: flex;
-  ${({ variant }) => {
-    if (variant === 'sm') {
+  background-color: ${colors.primary.nanoblue};
+  height: max-content;
+  ${(props: NanoNavigationProps) => {
+    if (props.showLogo) {
       return {
-        height: '24px',
+        paddingTop: "24px",
+        justifyContent: "space-between",
+        width: "100%",
       };
     }
     return {
-      height: '32px',
+      paddingTop: "5px",
+      width: "fit-content",
     };
   }}
-  background-color: ${colors.primary.nanoblue};
-  width: fit-content;
 `;
 
 const NanoList = styled.ul`
@@ -47,19 +42,35 @@ const NanoListItem = styled.li`
   }
 `;
 
-export const NanoNavigation: FunctionComponent<Props> = (props) => {
-  const { links, variant } = props;
+const NanoLogoWrapper = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+`;
+
+export const NanoNavigation: FunctionComponent<NanoNavigationProps> = (
+  props
+) => {
+  const { links, variant, showLogo, logoPath } = props;
   return (
     <NanoNav {...props}>
+      {showLogo ? (
+        <NanoLogoWrapper href={logoPath ?? "/#"}>
+          <NanoLogo
+            variant={NanoLogoVariant.ONE_LINER_WHITE}
+            size={NanoLogoSize.MAIN_NAV}
+            removePadding={true}
+          />
+        </NanoLogoWrapper>
+      ) : null}
       <NanoList>
         {links.map((link: NanoNavigationLink, index: number) => (
-          <NanoListItem key={'nano-navigation-' + link.title + index}>
+          <NanoListItem key={"nano-navigation-" + link.title + index}>
             <NanoLink
               to={link.path}
               inactive={!link.active}
               variant={variant}
-              noBorder
-              isNavLink
+              noBorder={true}
+              isNavLink={true}
             >
               {link.title}
             </NanoLink>
