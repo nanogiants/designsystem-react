@@ -5,7 +5,6 @@
   "module": "dist/bundle/esm/index.js",
   "types": "dist/bundle/js/index.d.ts",
   "sideEffects": false,
-  "private": true,
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
