@@ -1,15 +1,53 @@
-# React Bindings
+# Nanogiants React Component Library
 
-This Package contains the React Bindings to use the `paintablejs` Library as a React component.  
-See [usage](../../../docs/React.md).
+This Repository contains the Nanogiants CI Components which can be used in any React Project.
+For a preview you can see all components in the [Storybook](https://static.wd-app.com/nanogiants-designsystem-react).  
+For the Credentials see 1Password.
 
-## Development
 
-Run `npm run dev` for a dev server.  
-The served artifacts will be stored in the `packages/dist/react/` directory.  
-The library will automatically reload if you change any of the source files.
+# Usage
 
-## Build
+```bash
+npm i @nanogiants/designsystem-react
+```
 
-Run `npm run build` to build the library.  
-The build artifacts will be stored in the `packages/dist/react/` directory.
+In your App:
+
+```tsx
+import {
+  NanoButton,
+  NanoH1,
+  NanoH2,
+  NanoH3,
+  NanoH4,
+  NanoH5,
+  NanoH6,
+  NanoLogo,
+  NanoTextInput,
+} from '@nanogiants/designsystem-react';
+import '@nanogiants/designsystem-react/dist/assets/fonts.css';
+function App() {
+  const [testTextInputValue, setTestTextInputValue] = useState('');
+
+  return (
+    <div>
+      <NanoH1>HEADLINE</NanoH1>
+      <NanoH2>HEADLINE2</NanoH2>
+      <NanoH3>HEADLINE3</NanoH3>
+      <NanoH3 variant="sharpgrotesk">HEADLINE3 Sharp</NanoH3>
+      <NanoH4>HEADLINE4</NanoH4>
+      <NanoH5>HEADLINE5</NanoH5>
+      <NanoH6>HEADLINE6</NanoH6>
+      <NanoButton disabled>Button</NanoButton>
+      <NanoTextInput
+        label="Label"
+        value={testTextInputValue}
+        onChange={(e) => setTestTextInputValue(e.target.value)}
+      ></NanoTextInput>
+      <NanoLogo></NanoLogo>
+    </div>
+  );
+}
+
+
+```
