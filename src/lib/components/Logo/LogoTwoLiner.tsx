@@ -1,22 +1,19 @@
 import React, { FunctionComponent } from 'react';
-import { LogoProps, NanoLogoSize } from './Logo';
+import { LogoProps, NanoLogoSize } from './shared';
 
 export const LogoTwoLiner: FunctionComponent<LogoProps> = (
   props: LogoProps
 ) => {
   const { size, fill } = props;
 
-  const getHeightFromSize = (size: NanoLogoSize): string => {
-    switch (size) {
+  const getHeightFromSize = (logoSize: NanoLogoSize): string => {
+    switch (logoSize) {
       case NanoLogoSize.SMALL:
         return '56.5px';
-        break;
       case NanoLogoSize.LARGE:
         return '226px';
-        break;
       default:
         return '113px';
-        break;
     }
   };
   return (

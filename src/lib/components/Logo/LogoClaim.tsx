@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { LogoProps, NanoLogoSize } from './Logo';
+import { LogoProps, NanoLogoSize } from './shared';
 
 export interface LogoClaimProps extends LogoProps {
   fillSubtitle?: string;
@@ -10,17 +10,14 @@ export const LogoClaim: FunctionComponent<LogoClaimProps> = (
 ) => {
   const { size, fill, fillSubtitle } = props;
 
-  const getHeightFromSize = (size: NanoLogoSize): string => {
-    switch (size) {
+  const getHeightFromSize = (logoSize: NanoLogoSize): string => {
+    switch (logoSize) {
       case NanoLogoSize.SMALL:
         return '56px';
-        break;
       case NanoLogoSize.LARGE:
         return '224px';
-        break;
       default:
         return '112px';
-        break;
     }
   };
   return (

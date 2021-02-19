@@ -1,11 +1,10 @@
 import React from 'react';
-import { colors } from '../../theme/colors';
 import {
   NanoLogo,
-  NanoLogoSize,
   NanoLogoVariant,
-  Props as NanoLogoProps,
+  NanoLogoProps,
 } from './Logo';
+import { NanoLogoSize } from './shared';
 
 export default {
   title: 'Components/Logo',
