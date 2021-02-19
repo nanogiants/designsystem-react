@@ -1,8 +1,8 @@
-import React, { FunctionComponent, useState } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React, { FunctionComponent, useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-import { NanoNavigationLink, NanoSideNavigationProps } from "./shared";
+import { NanoNavigationLink, NanoSideNavigationProps } from './shared';
 
 const NanoBurgerNav = styled.nav<NanoSideNavigationProps>`
   color: #4a4a4a;
@@ -112,12 +112,8 @@ export const NanoBurgerNavigation: FunctionComponent<NanoSideNavigationProps> = 
 
   return (
     <>
-      <NanoBurgerNav {...props}>
-        <NanoBurger
-          role="button"
-          className={isActive ? "is-active" : ""}
-          onClick={toggleNavigation}
-        >
+      <NanoBurgerNav {...props} onClick={toggleNavigation}>
+        <NanoBurger role="button" className={isActive ? 'is-active' : ''}>
           <NanoBurgerLine aria-hidden="true"></NanoBurgerLine>
           <NanoBurgerLine aria-hidden="true"></NanoBurgerLine>
           <NanoBurgerLine aria-hidden="true"></NanoBurgerLine>
@@ -128,8 +124,8 @@ export const NanoBurgerNavigation: FunctionComponent<NanoSideNavigationProps> = 
         <NanoList>
           {links.map((link: NanoNavigationLink, index: number) => (
             <NanoBurgerNavLink
-              key={"burgernav-" + link.title + index}
-              to={link.path ?? "/#"}
+              key={'burgernav-' + link.title + index}
+              to={link.path ?? '/#'}
             >
               {link.title}
             </NanoBurgerNavLink>

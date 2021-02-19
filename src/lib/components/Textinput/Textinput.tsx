@@ -39,7 +39,7 @@ const Inner = styled.div<InnerProps>`
 `;
 
 const Input = styled.input`
-  font-family: 'SharpGroteskSmBold19';
+  font-family: SharpGroteskBook19;
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -61,12 +61,12 @@ const Label = styled.label<any>`
   pointer-events: none;
   transition: transform 0.2s;
 
-  font-family: SharpGrotesk;
+  font-family: SharpGroteskBook19;
   font-size: 16px;
   line-height: 26px;
 
-  ${({ required, hasContent }) =>
-    required && !hasContent
+  ${({ required }) =>
+    required
       ? css`
           &:after {
             content: '*';
@@ -78,6 +78,7 @@ const Label = styled.label<any>`
   ${({ hasContent }) =>
     hasContent &&
     css`
+    font-family: SharpGroteskSmBold19
       transform: translateY(-10px);
       font-size: 10px;
       line-height: 16px;
@@ -86,7 +87,7 @@ const Label = styled.label<any>`
 `;
 
 const Error = styled.div`
-  font-family: SharpGrotesk;
+  font-family: SharpGroteskSmBold19;
   margin: 4px 0 0 14px;
   color: ${colors.primary.giantred};
   font-size: 10px;
@@ -94,14 +95,15 @@ const Error = styled.div`
   font-weight: bold;
 `;
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
+export interface NanoTextInputProps
+  extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   error?: string;
   required?: boolean;
   width?: string;
 }
 
-export const NanoTextinput: FunctionComponent<Props> = (props: Props) => {
+export const NanoTextInput: FunctionComponent<NanoTextInputProps> = (props) => {
   const {
     error,
     label,

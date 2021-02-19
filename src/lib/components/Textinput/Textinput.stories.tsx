@@ -1,20 +1,33 @@
+import { Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
-import { NanoTextinput } from './Textinput';
+import { NanoTextInput, NanoTextInputProps } from './Textinput';
 
 export default {
-  title: 'Components/NanoTextInput',
+  title: 'Components/TextInput',
+  argTypes: {
+    error: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 };
 
-export const Primary = () => {
-  const [testInput, setTestTnput] = useState('');
+const Template: Story<NanoTextInputProps> = (props) => {
+  const [textInputValue, setTextInputValue] = useState<string>('');
 
   return (
-    <NanoTextinput
-      label="Label"
-      value={testInput}
-      required
-      onChange={(e) => setTestTnput(e.target.value)}
-    ></NanoTextinput>
+    <NanoTextInput
+      {...props}
+      value={textInputValue}
+      onChange={(e) => setTextInputValue(e.target.value)}
+    ></NanoTextInput>
   );
+};
+
+export const Primary: Story<NanoTextInputProps> = Template.bind({});
+Primary.args = {
+  label: 'Label',
+  required: false,
 };
