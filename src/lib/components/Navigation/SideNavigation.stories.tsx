@@ -25,9 +25,6 @@ export const SideNavigation: Story<NanoSideNavigationProps> = SideNavigationTemp
   {}
 );
 
-SideNavigation.argTypes = {
-  logoHref: { table: { disable: true } },
-};
 SideNavigation.args = {
   links: [
     {
