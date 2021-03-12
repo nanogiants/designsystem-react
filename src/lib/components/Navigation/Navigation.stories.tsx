@@ -1,87 +1,48 @@
-import { Story } from "@storybook/react/types-6-0";
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Story } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import { NanoBurgerNavigation } from "./BurgerNavigation";
-import { NanoNavigation } from "./Navigation";
-import { NanoSideNavigation } from "./SideNavigation";
-import {
-  NanoNavigationLink,
-  NanoNavigationProps,
-  NanoSideNavigationProps,
-} from "./shared";
+import { NanoLink } from '../Link/Link';
+
+import { NanoBurgerNavigation } from './BurgerNavigation';
+import { NanoNavigation } from './Navigation';
+import { NanoSideNavigation } from './SideNavigation';
+import { NanoNavigationProps, NanoSideNavigationProps } from './shared';
 
 export default {
-  title: "Components/Navigation",
+  title: 'Components/Navigation',
   component: NanoNavigation,
   parameters: {
     backgrounds: {
-      default: "nanoblue",
+      default: 'nanoblue',
     },
   },
   argTypes: {
     showLogo: {
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
     variant: {
       control: {
-        type: "select",
-        options: ["sm", "lg"],
+        type: 'select',
+        options: ['sm', 'lg'],
       },
     },
   },
 };
 
-const nanoNavigationLinks: NanoNavigationLink[] = [
-  {
-    path: "/start",
-    title: "Start",
-    active: true,
-  },
-  {
-    path: "/about-us",
-    title: "Über uns",
-    active: false,
-  },
-  {
-    path: "/werte",
-    title: "Werte",
-    active: false,
-  },
-  {
-    path: "/app-entwicklung",
-    title: "App-Entwicklung",
-    active: false,
-  },
-  {
-    path: "/referenzen",
-    title: "Referenzen",
-    active: false,
-  },
-  {
-    path: "/new-work",
-    title: "New Work",
-    active: false,
-  },
-  {
-    path: "/karriere",
-    title: "Karriere",
-    active: false,
-  },
-  {
-    path: "/kontakt",
-    title: "Kontakt",
-    active: false,
-  },
+const nanoNavigationLinks: JSX.Element[] = [
+  <NanoLink variant='sm' inactive={false} noBorder isNavLink>
+    Start
+  </NanoLink>,
+  <NanoLink variant='sm' inactive={true} noBorder isNavLink>
+    Über uns
+  </NanoLink>,
 ];
 
 /* Simple Navigation */
 const NavigationTemplate = (args: NanoNavigationProps) => (
-  <Router>
-    <NanoNavigation {...args} />
-  </Router>
+  <NanoNavigation {...args} />
 );
 
 export const Navigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
@@ -89,7 +50,6 @@ export const Navigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
 );
 
 Navigation.args = {
-  variant: "sm",
   links: nanoNavigationLinks,
 };
 
@@ -101,17 +61,14 @@ MainNavigation.argTypes = {
   showLogo: { table: { disable: true } },
 };
 MainNavigation.args = {
-  variant: "sm",
   links: nanoNavigationLinks,
   showLogo: true,
-  logoPath: "/#",
+  logoHref: '/#',
 };
 
 /* Side Navigation */
 const SideNavigationTemplate = (args: NanoSideNavigationProps) => (
-  <Router>
-    <NanoSideNavigation {...args} />
-  </Router>
+  <NanoSideNavigation {...args} />
 );
 
 export const SideNavigation: Story<NanoSideNavigationProps> = SideNavigationTemplate.bind(
@@ -123,13 +80,26 @@ SideNavigation.argTypes = {
   variant: { table: { disable: true } },
   logoPath: { table: { disable: true } },
 };
-SideNavigation.args = { links: nanoNavigationLinks };
+SideNavigation.args = {
+  links: [
+    {
+      active: true,
+      content: 'Start',
+    },
+    {
+      active: false,
+      content: (
+        <NanoLink variant='sm' inactive={true} noBorder isNavLink>
+          Über uns
+        </NanoLink>
+      ),
+    },
+  ],
+};
 
 /* Burger Navigation */
 const BurgerNavigationTemplate = (args: NanoNavigationProps) => (
-  <Router>
-    <NanoBurgerNavigation {...args} />
-  </Router>
+  <NanoBurgerNavigation {...args} />
 );
 
 export const BurgerNavigation: Story<NanoNavigationProps> = BurgerNavigationTemplate.bind(
