@@ -26,8 +26,8 @@ const Template: Story<NanoTextInputProps> = (props) => {
   );
 };
 
-export const Primary: Story<NanoTextInputProps> = Template.bind({});
-Primary.args = {
+export const TextInput: Story<NanoTextInputProps> = Template.bind({});
+TextInput.args = {
   label: 'Label',
   required: false,
 };

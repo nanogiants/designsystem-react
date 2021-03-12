@@ -50,7 +50,7 @@ const Inner = styled.div<InnerProps>`
 `;
 
 const Value = styled.div`
-  font-family: SharpGrotesk;
+  font-family: SharpGroteskBook19;
   padding-left: ${OFFSET_LEFT + 2}px;
   padding-right: 12px;
   height: 100%;
@@ -69,6 +69,7 @@ const Value = styled.div`
 `;
 
 const Label = styled.label<any>`
+  font-family: SharpGroteskBook19;
   position: absolute;
   top: 2px;
   left: ${OFFSET_LEFT + 2}px;
@@ -76,8 +77,6 @@ const Label = styled.label<any>`
     error ? colors.secondary.titanred : colors.secondary.rapidgrey};
   pointer-events: none;
   transition: transform 0.2s;
-
-  font-family: SharpGrotesk;
   font-size: 16px;
   line-height: 26px;
 
@@ -172,12 +171,13 @@ export const NanoDropdown: <T = string>(
 };
 
 const OptionItem = styled.div`
+  font-family: SharpGroteskBook19;
   display: flex;
   align-items: center;
   height: 40px;
   cursor: pointer;
   user-select: none;
-  border-bottom: 1px solid ${colors.secondary.rapidgrey};
+  border-bottom: 2px solid ${colors.secondary.rapidgrey};
   padding-left: ${OFFSET_LEFT}px;
   width: calc(100% - ${OFFSET_LEFT}px);
 `;
