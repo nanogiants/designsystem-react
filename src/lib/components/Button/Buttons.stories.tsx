@@ -8,6 +8,7 @@ import { NanoButton, NanoButtonProps, NanoButtonVariants } from './Button';
 
 export default {
   title: 'Components/Button',
+  component: NanoButton,
   argTypes: {
     disabled: {
       control: {
@@ -28,16 +29,19 @@ export default {
   },
 };
 
-const Template: Story<NanoButtonProps> = (args) => (
-  <>
-    <ButtonContainer>
-      <NanoButton {...args} />
-    </ButtonContainer>
-    <ButtonContainer>
-      <NanoButton {...args} icon={<Arrow stroke="white" fill="white" />} />
-    </ButtonContainer>
-  </>
-);
+const Template: Story<NanoButtonProps> = (args) => {
+  const { icon, ...rest } = args;
+  return (
+    <>
+      <ButtonContainer>
+        <NanoButton {...rest} />
+      </ButtonContainer>
+      <ButtonContainer>
+        <NanoButton {...rest} icon={icon} />
+      </ButtonContainer>
+    </>
+  );
+};
 
 export const Primary: Story<NanoButtonProps> = Template.bind({});
 
@@ -45,6 +49,7 @@ Primary.args = {
   variant: NanoButtonVariants.PRIMARY,
   children: 'Button',
   size: 'md',
+  icon: <Arrow stroke="white" fill="white" />,
 };
 
 export const Secondary: Story<NanoButtonProps> = Template.bind({});
@@ -53,6 +58,7 @@ Secondary.args = {
   variant: NanoButtonVariants.SECONDARY,
   children: 'Button',
   size: 'md',
+  icon: <Arrow stroke="white" fill="white" />,
 };
 
 const ButtonContainer = styled.div`

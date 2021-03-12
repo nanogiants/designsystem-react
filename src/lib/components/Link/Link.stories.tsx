@@ -32,8 +32,8 @@ const Template: Story<NanoLinkProps> = (args) => (
   </Router>
 );
 
-export const Primary: Story<NanoLinkProps> = Template.bind({});
-Primary.args = {
+export const Link: Story<NanoLinkProps> = Template.bind({});
+Link.args = {
   children: 'Link',
   variant: 'lg',
 };
