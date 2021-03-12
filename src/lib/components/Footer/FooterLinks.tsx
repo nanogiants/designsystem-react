@@ -38,8 +38,8 @@ export const NanoFooterLinks: FunctionComponent<NanoFooterLinksProps> = (
 
   return (
     <NanoFooterLinksContainer>
-      {rows.map((row: Row) => (
-        <NanoFooterLinksRow>
+      {rows.map((row: Row, index: number) => (
+        <NanoFooterLinksRow key={'footer-link-row-' + index}>
           <NanoFooterLinksRowHeadline>
             {row.headline}
           </NanoFooterLinksRowHeadline>
