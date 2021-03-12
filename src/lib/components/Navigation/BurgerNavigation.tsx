@@ -1,10 +1,9 @@
 import React, { FunctionComponent, useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { NanoNavigationLink, NanoSideNavigationProps } from './shared';
+import { NanoBurgerNavigationProps } from './shared';
 
-const NanoBurgerNav = styled.nav<NanoSideNavigationProps>`
+const NanoBurgerNav = styled.nav`
   color: #4a4a4a;
   cursor: pointer;
   display: block;
@@ -16,6 +15,7 @@ const NanoBurgerNav = styled.nav<NanoSideNavigationProps>`
 `;
 
 const NanoList = styled.div`
+  min-width: 100px;
   position: absolute;
   right: 18px;
   top: 18px;
@@ -28,7 +28,7 @@ const NanoList = styled.div`
   z-index: 9;
 `;
 
-const NanoBurgerNavLink = styled(Link)`
+const NanoBurgerNavLink = styled.li`
   display: block;
   line-height: 16px;
   font-size: 16px;
@@ -100,7 +100,7 @@ const NanoBurger = styled.a`
   }
 `;
 
-export const NanoBurgerNavigation: FunctionComponent<NanoSideNavigationProps> = (
+export const NanoBurgerNavigation: FunctionComponent<NanoBurgerNavigationProps> = (
   props
 ) => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -113,21 +113,18 @@ export const NanoBurgerNavigation: FunctionComponent<NanoSideNavigationProps> = 
   return (
     <>
       <NanoBurgerNav {...props} onClick={toggleNavigation}>
-        <NanoBurger role="button" className={isActive ? 'is-active' : ''}>
-          <NanoBurgerLine aria-hidden="true"></NanoBurgerLine>
-          <NanoBurgerLine aria-hidden="true"></NanoBurgerLine>
-          <NanoBurgerLine aria-hidden="true"></NanoBurgerLine>
+        <NanoBurger role='button' className={isActive ? 'is-active' : ''}>
+          <NanoBurgerLine aria-hidden='true'></NanoBurgerLine>
+          <NanoBurgerLine aria-hidden='true'></NanoBurgerLine>
+          <NanoBurgerLine aria-hidden='true'></NanoBurgerLine>
         </NanoBurger>
       </NanoBurgerNav>
 
       {isActive ? (
         <NanoList>
-          {links.map((link: NanoNavigationLink, index: number) => (
-            <NanoBurgerNavLink
-              key={'burgernav-' + link.title + index}
-              to={link.path ?? '/#'}
-            >
-              {link.title}
+          {links.map((link: JSX.Element, index: number) => (
+            <NanoBurgerNavLink key={'burgernav-' + link.key + index}>
+              {link}
             </NanoBurgerNavLink>
           ))}
         </NanoList>

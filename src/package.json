@@ -1,0 +1,12 @@
+{
+  "name": "@nanogiants/designsystem-react",
+  "version": "0.2.0",
+  "main": "bundle/js/index.js",
+  "module": "bundle/esm/index.js",
+  "types": "bundle/js/index.d.ts",
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

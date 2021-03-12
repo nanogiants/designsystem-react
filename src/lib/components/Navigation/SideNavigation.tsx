@@ -1,8 +1,7 @@
-import React, { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React, { FunctionComponent } from 'react';
+import styled from 'styled-components';
 
-import { NanoNavigationLink, NanoSideNavigationProps } from "./shared";
+import { NanoSideNavigationLink, NanoSideNavigationProps } from './shared';
 
 const NanoSideNav = styled.nav<NanoSideNavigationProps>`
   display: flex;
@@ -19,7 +18,7 @@ const NanoList = styled.ul`
   padding: 0;
 `;
 
-const NanoSideNavLink = styled(Link)`
+const NanoSideNavLink = styled.li`
   display: block;
   height: 12px;
   margin: 6px 0;
@@ -29,7 +28,7 @@ const NanoSideNavLink = styled(Link)`
   &:after {
     cursor: pointer;
     background-color: #d90855;
-    content: "";
+    content: '';
     width: 10px;
     height: 2px;
     position: absolute;
@@ -53,7 +52,7 @@ const NanoSideNavLink = styled(Link)`
   }
 `;
 
-const NanoSideNavTitle = styled.span`
+export const NanoSideNavTitle = styled.span`
   display: block;
   cursor: pointer;
   color: #fff;
@@ -76,13 +75,14 @@ export const NanoSideNavigation: FunctionComponent<NanoSideNavigationProps> = (
   return (
     <NanoSideNav {...props}>
       <NanoList>
-        {links.map((link: NanoNavigationLink, index: number) => (
+        {links.map((link: NanoSideNavigationLink, index: number) => (
           <NanoSideNavLink
-            key={"sidenav-" + link.title + index}
-            className={link.active ? "active" : null}
-            to={link.path ?? "/#"}
+            key={'sidenav-' + index}
+            className={link.active ? 'active' : null}
           >
-            <NanoSideNavTitle className="label">{link.title}</NanoSideNavTitle>
+            <NanoSideNavTitle className='label'>
+              {link.content}
+            </NanoSideNavTitle>
           </NanoSideNavLink>
         ))}
       </NanoList>

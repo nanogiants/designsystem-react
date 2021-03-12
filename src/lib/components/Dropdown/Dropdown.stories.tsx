@@ -5,6 +5,7 @@ import { NanoDropdown, NanoDropdownProps } from './Dropdown';
 
 export default {
   title: 'Components/Dropdown',
+  component: NanoDropdown,
   argTypes: {
     value: { table: { disable: true } },
     values: { table: { disable: true } },
@@ -23,8 +24,8 @@ const Template: Story<NanoDropdownProps<any>> = (props) => {
   );
 };
 
-export const Primary: Story<NanoDropdownProps<number>> = Template.bind({});
-Primary.args = {
+export const Dropdown: Story<NanoDropdownProps<number>> = Template.bind({});
+Dropdown.args = {
   label: 'Label',
   values: [
     {
@@ -45,7 +46,7 @@ Primary.args = {
     },
   ],
 };
-Primary.argTypes = {
+Dropdown.argTypes = {
   error: {
     control: {
       type: 'text',
