@@ -44,6 +44,14 @@ export default {
           src: ['src/lib/assets'],
           dest: './dist',
         },
+        {
+          src: ['README.md'],
+          dest: './dist',
+        },
+        {
+          src: ['src/package.json'],
+          dest: './dist',
+        },
       ],
     }),
   ],

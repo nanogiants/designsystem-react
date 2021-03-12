@@ -106,6 +106,7 @@ jobs:
         id: publish
         uses: JS-DevTools/npm-publish@v1
         with:
+          package: ./dist/package.json
           token: ${{ secrets.NPM_TOKEN }}
           check-version: true
       - name: Show version change
