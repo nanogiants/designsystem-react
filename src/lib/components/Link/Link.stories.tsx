@@ -27,8 +27,8 @@ export default {
 
 const Template: Story<NanoLinkProps> = (args) => <NanoLink {...args} />;
 
-export const Primary: Story<NanoLinkProps> = Template.bind({});
-Primary.args = {
+export const Link: Story<NanoLinkProps> = Template.bind({});
+Link.args = {
   children: 'Link',
   variant: 'lg',
 };
