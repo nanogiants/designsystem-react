@@ -2,15 +2,13 @@ import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
 
 import { NanoLink } from '../Link/Link';
-import { NanoLogo, NanoLogoVariant } from '../Logo/Logo';
-import { NanoLogoSize } from '../Logo/shared';
 
-import { NanoNavigation } from './Navigation';
+import { NanoBurgerNavigation } from './BurgerNavigation';
 import { NanoNavigationProps } from './shared';
 
 export default {
-  title: 'Components/Navigation/Main Navigation',
-  component: NanoNavigation,
+  title: 'Components/Navigation/Burger Navigation',
+  component: NanoBurgerNavigation,
   parameters: {
     backgrounds: {
       default: 'nanoblue',
@@ -45,22 +43,13 @@ const nanoNavigationLinks: JSX.Element[] = [
   </NanoLink>,
 ];
 
-/* Simple Navigation */
-const NavigationTemplate = (args: NanoNavigationProps) => (
-  <NanoNavigation {...args} />
+/* Burger Navigation */
+const BurgerNavigationTemplate = (args: NanoNavigationProps) => (
+  <NanoBurgerNavigation {...args} />
 );
 
-export const MainNavigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
+export const BurgerNavigation: Story<NanoNavigationProps> = BurgerNavigationTemplate.bind(
   {}
 );
 
-MainNavigation.args = {
-  links: nanoNavigationLinks,
-  logo: (
-    <NanoLogo
-      variant={NanoLogoVariant.ONE_LINER_WHITE}
-      size={NanoLogoSize.MAIN_NAV}
-      removePadding={true}
-    />
-  ),
-};
+BurgerNavigation.args = { links: nanoNavigationLinks };

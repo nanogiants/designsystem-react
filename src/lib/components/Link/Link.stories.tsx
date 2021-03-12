@@ -1,6 +1,5 @@
 import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 import { NanoLink, NanoLinkProps } from './Link';
 
@@ -26,11 +25,7 @@ export default {
   },
 };
 
-const Template: Story<NanoLinkProps> = (args) => (
-  <Router>
-    <NanoLink {...args} />
-  </Router>
-);
+const Template: Story<NanoLinkProps> = (args) => <NanoLink {...args} />;
 
 export const Link: Story<NanoLinkProps> = Template.bind({});
 Link.args = {
