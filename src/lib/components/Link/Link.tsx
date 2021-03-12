@@ -1,4 +1,5 @@
 import React, { FunctionComponent, ReactNode } from 'react';
+import { Link, LinkProps } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 
 import { colors } from '../../theme/colors';
@@ -12,7 +13,7 @@ interface NgLinkProps {
   isNavLink?: boolean;
 }
 
-const NgLink = styled.div<NgLinkProps>`
+const NgLink = styled(Link)<NgLinkProps>`
   color: ${({ isNavLink, inactive }) =>
     isNavLink
       ? colors.primary.white
@@ -67,14 +68,9 @@ const NgLink = styled.div<NgLinkProps>`
       (isNavLink || !inactive
         ? colors.primary.giantred
         : colors.secondary.slowgrey)};
-    ${({ inactive }) =>
-      inactive
-        ? css`
-            transform: scaleX(0);
-            transition: transform 250ms ease-in-out;
-            transform-origin: 0% 50%;
-          `
-        : ''}
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    transform-origin: 0% 50%;
   }
 
   :hover {
@@ -93,7 +89,7 @@ const LinkWrapper = styled.div`
   width: fit-content;
 `;
 
-export interface NanoLinkProps {
+export interface NanoLinkProps extends LinkProps {
   variant?: Variants;
   inactive?: boolean;
   children?: ReactNode;
@@ -102,10 +98,11 @@ export interface NanoLinkProps {
 }
 
 export const NanoLink: FunctionComponent<NanoLinkProps> = (props) => {
-  const { variant, inactive, noBorder, isNavLink } = props;
+  const { variant, inactive, noBorder, to, isNavLink } = props;
 
   const navLinkContent = (
     <NgLink
+      to={to}
       variant={variant}
       inactive={inactive}
       noBorder={noBorder}

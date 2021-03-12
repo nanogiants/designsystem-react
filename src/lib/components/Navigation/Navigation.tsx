@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from 'react';
-import styled from 'styled-components';
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 
-import { colors } from '../../theme/colors';
-import { NanoLogo, NanoLogoVariant } from '../Logo/Logo';
-import { NanoLogoSize } from '../Logo/shared';
+import { colors } from "../../theme/colors";
+import { NanoLink } from "../Link/Link";
+import { NanoLogo, NanoLogoVariant } from "../Logo/Logo";
+import { NanoLogoSize } from "../Logo/shared";
 
-import { NanoNavigationProps } from './shared';
+import { NanoNavigationLink, NanoNavigationProps } from "./shared";
 
 const NanoNav = styled.nav<NanoNavigationProps>`
   display: flex;
@@ -14,14 +15,14 @@ const NanoNav = styled.nav<NanoNavigationProps>`
   ${(props: NanoNavigationProps) => {
     if (props.showLogo) {
       return {
-        paddingTop: '24px',
-        justifyContent: 'space-between',
-        width: '100%',
+        paddingTop: "24px",
+        justifyContent: "space-between",
+        width: "100%",
       };
     }
     return {
-      paddingTop: '5px',
-      width: 'fit-content',
+      paddingTop: "5px",
+      width: "fit-content",
     };
   }}
 `;
@@ -50,11 +51,11 @@ const NanoLogoWrapper = styled.a`
 export const NanoNavigation: FunctionComponent<NanoNavigationProps> = (
   props
 ) => {
-  const { links, showLogo, logoHref } = props;
+  const { links, variant, showLogo, logoPath } = props;
   return (
     <NanoNav {...props}>
       {showLogo ? (
-        <NanoLogoWrapper href={logoHref ?? '/#'}>
+        <NanoLogoWrapper href={logoPath ?? "/#"}>
           <NanoLogo
             variant={NanoLogoVariant.ONE_LINER_WHITE}
             size={NanoLogoSize.MAIN_NAV}
@@ -63,9 +64,16 @@ export const NanoNavigation: FunctionComponent<NanoNavigationProps> = (
         </NanoLogoWrapper>
       ) : null}
       <NanoList>
-        {links.map((link: JSX.Element, index: number) => (
-          <NanoListItem key={'nano-navigation-' + link.key + index}>
-            {link}
+        {links.map((link: NanoNavigationLink, index: number) => (
+          <NanoListItem key={"nano-navigation-" + link.title + index}>
+            <NanoLink
+              to={link.path}
+              variant={variant}
+              noBorder={!link.active}
+              isNavLink={true}
+            >
+              {link.title}
+            </NanoLink>
           </NanoListItem>
         ))}
       </NanoList>

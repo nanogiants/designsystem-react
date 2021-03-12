@@ -1,20 +1,17 @@
+import { Variants } from "../Link/Link";
+
 export interface NanoNavigationLink {
   path: string;
   title: string;
   active: boolean;
 }
 
-export interface NanoSideNavigationLink {
-  active: boolean;
-  content: JSX.Element | string;
-}
-
 export interface NanoSideNavigationProps {
-  links: NanoSideNavigationLink[];
+  links: NanoNavigationLink[];
 }
 
-export interface NanoNavigationProps {
+export interface NanoNavigationProps extends NanoSideNavigationProps {
+  variant: Variants;
   showLogo?: boolean;
-  logoHref?: string;
-  links: JSX.Element[];
+  logoPath?: string;
 }
