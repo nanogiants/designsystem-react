@@ -10,11 +10,12 @@ interface NgLinkProps {
   inactive?: boolean;
   noBorder?: boolean;
   isNavLink?: boolean;
+  isFooterLink?: boolean;
 }
 
 const NgLink = styled.div<NgLinkProps>`
-  color: ${({ isNavLink, inactive }) =>
-    isNavLink
+  color: ${({ isNavLink, inactive, isFooterLink }) =>
+    isNavLink || isFooterLink
       ? colors.primary.white
       : inactive
       ? colors.secondary.slowgrey
@@ -99,10 +100,11 @@ export interface NanoLinkProps {
   children?: ReactNode;
   noBorder?: boolean;
   isNavLink?: boolean;
+  isFooterLink?: boolean;
 }
 
 export const NanoLink: FunctionComponent<NanoLinkProps> = (props) => {
-  const { variant, inactive, noBorder, isNavLink } = props;
+  const { variant, inactive, noBorder, isNavLink, isFooterLink } = props;
 
   const navLinkContent = (
     <NgLink
@@ -110,6 +112,7 @@ export const NanoLink: FunctionComponent<NanoLinkProps> = (props) => {
       inactive={inactive}
       noBorder={noBorder}
       isNavLink={isNavLink}
+      isFooterLink={isFooterLink}
     >
       {props.children}
     </NgLink>
