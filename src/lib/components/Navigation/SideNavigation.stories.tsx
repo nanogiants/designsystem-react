@@ -14,6 +14,17 @@ export default {
       default: 'nanoblue',
     },
   },
+  argTypes: {
+    links: {
+      description: 'NanoSideNavigationLink[]',
+      table: {
+        type: {
+          summary: 'Type Definition for NanoSideNavigationLink:',
+          detail: 'active: boolean,\ncontent: JSX.Element | string',
+        },
+      },
+    },
+  },
 };
 
 /* Side Navigation */
@@ -39,6 +50,34 @@ SideNavigation.args = {
       content: (
         <NanoLink variant='sm' inactive={true} noBorder isNavLink>
           Über uns
+        </NanoLink>
+      ),
+    },
+    {
+      active: false,
+      content: (
+        <NanoLink variant='sm' inactive={true} noBorder isNavLink>
+          Werte
+        </NanoLink>
+      ),
+    },
+    {
+      active: false,
+      content: (
+        <NanoLink variant='sm' inactive={true} noBorder isNavLink>
+          App-Entwicklung
+        </NanoLink>
+      ),
+    },
+    {
+      active: false,
+      content: 'Referenzen',
+    },
+    {
+      active: false,
+      content: (
+        <NanoLink variant='sm' inactive={true} noBorder isNavLink>
+          New Work
         </NanoLink>
       ),
     },
