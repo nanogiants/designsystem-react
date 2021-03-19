@@ -9,12 +9,12 @@ const NanoNav = styled.nav<NanoNavigationProps>`
   display: flex;
   background-color: ${colors.primary.nanoblue};
   height: max-content;
+  padding: 16px;
   ${(props: NanoNavigationProps) => {
     if (props.logo) {
       return {
         paddingTop: '24px',
         justifyContent: 'space-between',
-        width: '100%',
       };
     }
     return {
@@ -40,19 +40,18 @@ const NanoListItem = styled.li`
   }
 `;
 
-const NanoLogoWrapper = styled.a`
+const NanoLogoWrapper = styled.div`
   cursor: pointer;
-  text-decoration: none;
 `;
 
 export const NanoNavigation: FunctionComponent<NanoNavigationProps> = (
   props
 ) => {
-  const { links, logo, logoHref } = props;
+  const { links, logo } = props;
   return (
     <NanoNav {...props}>
       {logo ? (
-        <NanoLogoWrapper href={logoHref ?? '/#'}>
+        <NanoLogoWrapper>
           {logo}
         </NanoLogoWrapper>
       ) : null}
