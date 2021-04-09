@@ -12,10 +12,5 @@ export default create({
 
   appBg: colors.primary.white,
 
-  colorPrimary: 'yellow',
   colorSecondary: colors.primary.nanoblue,
-
-  //   barTextColor: 'silver',
-  //   barSelectedColor: 'black',
-  //   barBg: 'hotpink',
 });
