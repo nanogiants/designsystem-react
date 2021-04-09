@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "storybook": "start-storybook -p 6006 -s ./src/lib/assets --docs",
+    "storybook": "start-storybook -p 6006 -s ./src/lib/assets --no-manager-cache",
     "build:storybook": "build-storybook -s ./src/lib/assets",
     "lint": "eslint ./src/lib/**/*.{ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
