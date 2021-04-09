@@ -68,23 +68,4 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Building Storybook
-        run: npm run build
-
-  build_library:
-    name: 'Build Library'
-    runs-on: ubuntu-latest
-    needs: [install_deps, lint]
-    steps:
-      - name: Checking out repository
-        uses: actions/checkout@v1
-      - name: Checking out node package
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
-      - name: Build Library
-        run: npm run build
+        run: npm run build:storybook

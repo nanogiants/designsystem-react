@@ -4,7 +4,6 @@ This Repository contains the Nanogiants CI Components which can be used in any R
 For a preview you can see all components in the [Storybook](https://static.wd-app.com/nanogiants-designsystem-react).  
 For the Credentials see 1Password.
 
-
 # Usage
 
 ```bash
@@ -25,7 +24,7 @@ import {
   NanoLogo,
   NanoTextInput,
 } from '@nanogiants/designsystem-react';
-import '@nanogiants/designsystem-react/dist/assets/fonts.css';
+import '@nanogiants/designsystem-react/assets/fonts.css';
 function App() {
   const [testTextInputValue, setTestTextInputValue] = useState('');
 
@@ -48,6 +47,4 @@ function App() {
     </div>
   );
 }
-
-
 ```
