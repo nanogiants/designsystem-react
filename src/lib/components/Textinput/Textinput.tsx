@@ -56,8 +56,14 @@ const Label = styled.label<any>`
   position: absolute;
   top: 16px;
   left: ${OFFSET_LEFT + 2}px;
-  color: ${({ error }) =>
-    error ? colors.secondary.titanred : colors.secondary.rapidgrey};
+  color: ${({ error, focussed, hasContent }) => {
+    if (error) {
+      return colors.secondary.titanred;
+    }
+    return focussed && hasContent
+      ? colors.secondary.microblue
+      : colors.secondary.rapidgrey;
+  }};
   pointer-events: none;
   transition: transform 0.2s;
 
@@ -137,6 +143,7 @@ export const NanoTextInput: FunctionComponent<NanoTextInputProps> = (props) => {
           hasContent={props.value || false}
           error={error}
           required={required}
+          focussed={focussed}
         >
           {label}
         </Label>
