@@ -19,5 +19,4 @@ export interface NanoBurgerNavigationProps {
 
 export interface NanoNavigationProps extends NanoBurgerNavigationProps {
   logo?: JSX.Element;
-  logoHref?: string;
 }

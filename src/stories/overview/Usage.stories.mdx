@@ -1,14 +1,10 @@
-# Nanogiants React Component Library
+import { Meta } from '@storybook/addon-docs/blocks';
+import { App } from './Usage';
+import { version } from '../../../package.json';
 
-This Repository contains the Nanogiants CI Components which can be used in any React Project.
-For a preview you can see all components in the [Storybook](https://static.wd-app.com/nanogiants-designsystem-react).  
-For the Credentials see 1Password.
+<Meta title={`Overview ${version}/Usage`} />
 
 # Usage
-
-```bash
-npm i @nanogiants/designsystem-react
-```
 
 In your App:
 
@@ -48,3 +44,5 @@ function App() {
   );
 }
 ```
+
+<App />

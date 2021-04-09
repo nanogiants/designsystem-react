@@ -62,6 +62,20 @@ export const typography = {
       },
     },
   },
+  textStyles: {
+    sharpgroteskBook: {
+      fontFamily: 'SharpGroteskBook19',
+    },
+    sharpgroteskSemibold: {
+      fontFamily: 'Sharp Grotesk Semibold',
+    },
+    sharpgroteskMedium: {
+      fontFamily: 'SharpGroteskMedium20',
+    },
+    sharpgroteskSemibold19: {
+      fontFamily: 'SharpGroteskSmBold19',
+    },
+  },
   label: {
     color: colors.primary.nanoblue,
     fontFamily: 'Sharp Grotesk Semibold',

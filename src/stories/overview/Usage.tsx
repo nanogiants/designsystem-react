@@ -1,18 +1,5 @@
-# Nanogiants React Component Library
+import React, { useState } from 'react';
 
-This Repository contains the Nanogiants CI Components which can be used in any React Project.
-For a preview you can see all components in the [Storybook](https://static.wd-app.com/nanogiants-designsystem-react).  
-For the Credentials see 1Password.
-
-# Usage
-
-```bash
-npm i @nanogiants/designsystem-react
-```
-
-In your App:
-
-```tsx
 import {
   NanoButton,
   NanoH1,
@@ -23,13 +10,14 @@ import {
   NanoH6,
   NanoLogo,
   NanoTextInput,
-} from '@nanogiants/designsystem-react';
-import '@nanogiants/designsystem-react/assets/fonts.css';
-function App() {
-  const [testTextInputValue, setTestTextInputValue] = useState('');
+} from '../../index';
 
+import '../../lib/assets/fonts.css';
+
+export const App = () => {
+  const [testTextInputValue, setTestTextInputValue] = useState('');
   return (
-    <div>
+    <div style={{ backgroundColor: 'white' }}>
       <NanoH1>HEADLINE</NanoH1>
       <NanoH2>HEADLINE2</NanoH2>
       <NanoH3>HEADLINE3</NanoH3>
@@ -37,6 +25,7 @@ function App() {
       <NanoH4>HEADLINE4</NanoH4>
       <NanoH5>HEADLINE5</NanoH5>
       <NanoH6>HEADLINE6</NanoH6>
+      <NanoButton>Button</NanoButton>
       <NanoButton disabled>Button</NanoButton>
       <NanoTextInput
         label="Label"
@@ -46,5 +35,4 @@ function App() {
       <NanoLogo></NanoLogo>
     </div>
   );
-}
-```
+};
