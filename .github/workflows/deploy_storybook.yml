@@ -63,7 +63,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Building Storybook
         run: npm run build:storybook
-      - name: Deploy 🚀
+      - name: Deploy Storybook
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
