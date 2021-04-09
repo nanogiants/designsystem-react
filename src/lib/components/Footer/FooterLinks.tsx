@@ -27,7 +27,8 @@ const NanoFooterLinksRow = styled.div`
 const NanoFooterLinksRowHeadline = styled.h4`
   font-family: 'Sharp Grotesk Semibold';
   font-size: 17.5px;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 38px;
   color: ${colors.primary.white};
   margin: 0;
   padding: 0;
@@ -38,6 +39,7 @@ const NanoFooterLinksRowEntry = styled.div`
   font-family: 'SharpGroteskSmBold19';
   font-size: 19px;
   line-height: 33.6px;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   width: fit-content;
@@ -63,9 +65,14 @@ export const NanoFooterLinks: FunctionComponent<NanoFooterLinksProps> = (
           <NanoFooterLinksRowHeadline>
             {row.headline}
           </NanoFooterLinksRowHeadline>
-          {row.links.map((link: JSX.Element | string, index) => {
-            if (React.isValidElement(link)) return link;
-            return <NanoFooterLinksRowEntry>{link}</NanoFooterLinksRowEntry>;
+          {row.links.map((link: JSX.Element | string, entryIndex) => {
+            if (React.isValidElement(link))
+              return <link key={'footer-link-entry-' + entryIndex} />;
+            return (
+              <NanoFooterLinksRowEntry key={'footer-link-entry-' + entryIndex}>
+                {link}
+              </NanoFooterLinksRowEntry>
+            );
           })}
         </NanoFooterLinksRow>
       ))}
