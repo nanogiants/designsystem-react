@@ -1,8 +1,7 @@
 # Nanogiants React Component Library
 
 This Repository contains the Nanogiants CI Components which can be used in any React Project.
-For a preview you can see all components in the [Storybook](https://static.wd-app.com/nanogiants-designsystem-react).  
-For the Credentials see 1Password.
+For a preview you can see all components in the [Storybook](https://nanogiants.github.io/designsystem-react).
 
 # Usage
 
