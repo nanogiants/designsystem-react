@@ -1,6 +1,7 @@
 import { GlobalStyle } from '../src/lib/components/shared/global';
 import { colors } from '../src/lib/theme/colors';
 import { version } from '../package.json';
+import theme from './theme';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -21,6 +22,9 @@ export const parameters = {
         'Components',
       ],
     },
+  },
+  docs: {
+    theme: theme,
   },
 };
 
