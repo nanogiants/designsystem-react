@@ -29,3 +29,10 @@ export const SharpGroteskMedium = TemplateSharpGroteskMedium.bind({});
 SharpGroteskMedium.args = {
   children: loremipsum,
 };
+
+const TemplateSharpGroteskSemibold19 = (args) => <NanoTextSemibold {...args} />;
+
+export const SharpGroteskSemibold19 = TemplateSharpGroteskSemibold19.bind({});
+SharpGroteskSemibold19.args = {
+  children: loremipsum,
+};

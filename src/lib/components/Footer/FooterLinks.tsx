@@ -5,7 +5,7 @@ import { colors } from '../../theme/colors';
 
 export interface Row {
   headline: string;
-  links: JSX.Element[];
+  links: (JSX.Element | string)[];
 }
 
 export interface NanoFooterLinksProps {
@@ -21,7 +21,7 @@ const NanoFooterLinksContainer = styled.div`
 const NanoFooterLinksRow = styled.div`
   display: grid;
   grid-template-rows: 1fr auto;
-  grid-row-gap: 8px;
+  grid-row-gap: 13.6px;
 `;
 
 const NanoFooterLinksRowHeadline = styled.h4`
@@ -29,6 +29,26 @@ const NanoFooterLinksRowHeadline = styled.h4`
   font-size: 17.5px;
   font-weight: 600;
   color: ${colors.primary.white};
+  margin: 0;
+  padding: 0;
+  margin-bottom: -4px;
+`;
+
+const NanoFooterLinksRowEntry = styled.div`
+  font-family: 'SharpGroteskSmBold19';
+  font-size: 19px;
+  line-height: 33.6px;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  color: ${colors.primary.white};
+  cursor: pointer;
+  &:after {
+    display: block;
+    content: '';
+    margin-top: -1px;
+    border-bottom: 2px solid ${colors.primary.giantred};
+  }
 `;
 
 export const NanoFooterLinks: FunctionComponent<NanoFooterLinksProps> = (
@@ -43,7 +63,10 @@ export const NanoFooterLinks: FunctionComponent<NanoFooterLinksProps> = (
           <NanoFooterLinksRowHeadline>
             {row.headline}
           </NanoFooterLinksRowHeadline>
-          {row.links}
+          {row.links.map((link: JSX.Element | string, index) => {
+            if (React.isValidElement(link)) return link;
+            return <NanoFooterLinksRowEntry>{link}</NanoFooterLinksRowEntry>;
+          })}
         </NanoFooterLinksRow>
       ))}
     </NanoFooterLinksContainer>

@@ -50,11 +50,11 @@ const NavigationTemplate = (args: NanoNavigationProps) => (
   <NanoNavigation {...args} />
 );
 
-export const MainNavigation: Story<NanoNavigationProps> = NavigationTemplate.bind(
+export const MainNavigationWithLogo: Story<NanoNavigationProps> = NavigationTemplate.bind(
   {}
 );
 
-MainNavigation.args = {
+MainNavigationWithLogo.args = {
   links: nanoNavigationLinks,
   logo: (
     <NanoLogo
@@ -63,4 +63,11 @@ MainNavigation.args = {
       removePadding={true}
     />
   ),
+};
+
+export const MainNavigationWithoutLogo: Story<NanoNavigationProps> = NavigationTemplate.bind(
+  {}
+);
+MainNavigationWithoutLogo.args = {
+  links: nanoNavigationLinks,
 };
