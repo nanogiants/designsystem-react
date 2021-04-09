@@ -73,8 +73,12 @@ const Label = styled.label<any>`
   position: absolute;
   top: 2px;
   left: ${OFFSET_LEFT + 2}px;
-  color: ${({ error }) =>
-    error ? colors.secondary.titanred : colors.secondary.rapidgrey};
+  color: ${({ error, hasContent }) => {
+    if (error) {
+      return colors.secondary.titanred;
+    }
+    return hasContent ? colors.secondary.microblue : colors.secondary.rapidgrey;
+  }};
   pointer-events: none;
   transition: transform 0.2s;
   font-size: 16px;
