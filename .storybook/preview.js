@@ -11,6 +11,16 @@ export const parameters = {
       { name: 'giantred', value: colors.primary.giantred },
     ],
   },
+  options: {
+    storySort: {
+      order: [
+        'Overview',
+        ['Introduction', 'Installation', 'Usage'],
+        'Styleguide',
+        'Components',
+      ],
+    },
+  },
 };
 
 // Global decorator to apply the styles to all stories
