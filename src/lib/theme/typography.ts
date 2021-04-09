@@ -72,6 +72,9 @@ export const typography = {
     sharpgroteskMedium: {
       fontFamily: 'SharpGroteskMedium20',
     },
+    sharpgroteskSemibold19: {
+      fontFamily: 'SharpGroteskSmBold19',
+    },
   },
   label: {
     color: colors.primary.nanoblue,
