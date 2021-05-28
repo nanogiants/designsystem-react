@@ -1,0 +1,13 @@
+.first {
+  background-color: red;
+}
+.second {
+  background-color: blue;
+}
+.third {
+  background-color: green;
+}
+.row {
+  border: 1px solid black;
+  height: 100px;
+}
