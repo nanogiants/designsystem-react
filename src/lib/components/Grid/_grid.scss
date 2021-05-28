@@ -86,5 +86,19 @@
 // Common styles for small and large grid columns
 
 @if $enable-grid-classes {
-  @include make-grid-columns();
+  @media (min-width: map-get($grid-breakpoints, xs)) and (max-width: map-get($grid-breakpoints, sm)) {
+    @include make-grid-columns-xs();
+  }
+  @media (min-width: map-get($grid-breakpoints, sm)) and (max-width: map-get($grid-breakpoints, md)) {
+    @include make-grid-columns-sm();
+  }
+  @media (min-width: map-get($grid-breakpoints, md)) and (max-width: map-get($grid-breakpoints, lg)) {
+    @include make-grid-columns-md();
+  }
+  @media (min-width: map-get($grid-breakpoints, lg)) and (max-width: map-get($grid-breakpoints, xl)) {
+    @include make-grid-columns-lg();
+  }
+  @media (min-width: map-get($grid-breakpoints, xl)) {
+    @include make-grid-columns-xl();
+  }
 }

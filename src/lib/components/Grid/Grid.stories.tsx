@@ -26,9 +26,15 @@ export const Primary: Story<NanoGridProps> = Template.bind({});
 Primary.args = {
   children: [
     <div className='row' key='unique'>
-      <div className='col-3 first'>a</div>
-      <div className='col-3 second'>b</div>
-      <div className='col-6 third'>c</div>
+      <div className='col-xs-1 col-sm-2 col-md-3 col-lg-4 col-xl-12 first'>
+        col-xs-3 col-sm-2 col-md-3 col-lg-4 col-xl-12
+      </div>
+      <div className='col-xs-3 col-sm-1 col-md-3 col-lg-5 col-xl-2 second'>
+        col-xs-3 col-sm-1 col-md-3 col-lg-5 col-xl-2
+      </div>
+      <div className='col-xs-6 col-sm-5 col-md-6 col-lg-5 col-xl-2 third'>
+        col-xs-4 col-sm-5 col-md-6 col-lg-5 col-xl-2
+      </div>
     </div>,
   ],
 };
