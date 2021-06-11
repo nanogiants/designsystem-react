@@ -1,0 +1,65 @@
+@import './variables.scss';
+
+// keys need to be in the grid-breakpoints map (in variables.scss)
+$spacings: (
+  xs: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 36px,
+    xxxl: 40px,
+  ),
+  sm: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 36px,
+    xxxl: 40px,
+  ),
+  md: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 36px,
+    xxxl: 48px,
+  ),
+  lg: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 40px,
+    xxxl: 60px,
+  ),
+  xl: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 40px,
+    xxxl: 60px,
+  ),
+);
+
+@each $breakpoint, $_ in $grid-breakpoints {
+  @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+    :root {
+      @each $spacingsize, $spacingvalue in map-get($spacings, $breakpoint) {
+        --spacing-#{$spacingsize}: #{$spacingvalue};
+      }
+    }
+  }
+}

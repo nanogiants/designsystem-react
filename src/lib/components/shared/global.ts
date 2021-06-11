@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components';
 
-import '../../assets/fonts.css';
+import '../../assets/style/index.css';
 
 export const bodyStyles = css`
   /* same as before */

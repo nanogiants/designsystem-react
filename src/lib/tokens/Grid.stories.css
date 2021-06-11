@@ -1,0 +1,21 @@
+.first {
+  background-color: red;
+}
+.second {
+  background-color: blue;
+}
+.third {
+  background-color: green;
+}
+
+.fourth {
+  background-color: yellow;
+}
+
+.row > div {
+  height: 50px;
+}
+
+.spacing {
+  margin: var(--spacing-xxl);
+}

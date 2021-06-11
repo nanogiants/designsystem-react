@@ -12,7 +12,8 @@
     "build:storybook": "build-storybook -s ./src/lib/assets",
     "lint": "eslint ./src/lib/**/*.{ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
-    "postversion": "node ./bumpDistVersion && git add . && git commit -m \"Update version to $npm_package_version\""
+    "postversion": "node ./bumpDistVersion && git add . && git commit -m \"Update version to $npm_package_version\"",
+    "compile-sass": "node-sass src/lib/assets/style/index.scss src/lib/assets/style/index.css"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",

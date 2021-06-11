@@ -1,0 +1,65 @@
+@import './variables.scss';
+
+$grid-gutter-widths: (
+  xs: 8px,
+  sm: 16px,
+  md: 20px,
+  lg: 24px,
+  xl: 28px,
+);
+
+$container-max-widths: (
+  xs: 343px,
+  sm: 536px,
+  md: 704px,
+  lg: 1000px,
+  xl: 1004px,
+);
+
+// CONTAINER
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@each $size, $value in $container-max-widths {
+  @media (min-width: map-get($grid-breakpoints, $size)) {
+    .container {
+      max-width: $value;
+    }
+  }
+}
+
+// ROW
+.row {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+}
+
+@each $size, $value in $grid-gutter-widths {
+  @media (min-width: map-get($grid-breakpoints, $size)) {
+    .row {
+      column-gap: $value;
+    }
+  }
+}
+
+// COLS
+@each $size, $value in $grid-breakpoints {
+  @media (min-width: map-get($grid-breakpoints, $size)) {
+    @for $i from 1 through $grid-columns {
+      @for $y from 0 through $grid-columns {
+        $combined: $i + $y;
+        @if ($combined <= $grid-columns) {
+          .col-offset-#{$size}-#{$y}.col-#{$size}-#{$i} {
+            grid-column: #{$y + 1} / span #{$i};
+          }
+        }
+      }
+
+      .col-#{$size}-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+}
