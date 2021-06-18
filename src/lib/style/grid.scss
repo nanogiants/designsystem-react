@@ -7,7 +7,7 @@ $grid-columns: 12;
 
 // Generate the container max-widths for each breakpoint
 @each $size, $value in $container-max-widths {
-  @media (min-width: map-get($grid-breakpoints, $size)) {
+  @media (min-width: map-get($breakpoints, $size)) {
     .container {
       max-width: $value;
     }
@@ -22,7 +22,7 @@ $grid-columns: 12;
 
 // Generate the grid gap for each breakpoint
 @each $size, $value in $grid-gutter-widths {
-  @media (min-width: map-get($grid-breakpoints, $size)) {
+  @media (min-width: map-get($breakpoints, $size)) {
     .row {
       column-gap: $value;
     }
@@ -30,21 +30,21 @@ $grid-columns: 12;
 }
 
 // COLS for each breakpoint
-@each $size, $value in $grid-breakpoints {
-  @media (min-width: map-get($grid-breakpoints, $size)) {
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
     @for $i from 1 through $grid-columns {
       // The second loop eleminates some classes which would not be used
       // For example the class .col-lg-offset-12.col-lg-4 would not make sence because the combined columns cant be more than the number of grid-columns (12)
       @for $y from 0 through $grid-columns {
         $combined: $i + $y;
         @if ($combined <= $grid-columns) {
-          .col-offset-#{$size}-#{$y}.col-#{$size}-#{$i} {
+          .col-offset-#{$breakpoint-name}-#{$y}.col-#{$breakpoint-name}-#{$i} {
             grid-column: #{$y + 1} / span #{$i};
           }
         }
       }
 
-      .col-#{$size}-#{$i} {
+      .col-#{$breakpoint-name}-#{$i} {
         grid-column: span $i;
       }
     }

@@ -1,5 +1,5 @@
 import { GlobalStyle } from '../src/lib/components/shared/global';
-import tokens from '../src/lib/tokens';
+import colors from '../src/lib/tokens/colors';
 import { version } from '../package.json';
 import theme from './theme';
 
@@ -7,10 +7,10 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
     values: [
-      { name: 'white', value: tokens.colors.primary.white },
-      { name: 'black', value: tokens.colors.primary.black },
-      { name: 'nanoblue', value: tokens.colors.primary.nanoblue },
-      { name: 'giantred', value: tokens.colors.primary.giantred },
+      { name: 'white', value: colors.primary.white },
+      { name: 'black', value: colors.primary.black },
+      { name: 'nanoblue', value: colors.primary.nanoblue },
+      { name: 'giantred', value: colors.primary.giantred },
     ],
   },
   options: {

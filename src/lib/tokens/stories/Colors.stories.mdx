@@ -1,19 +1,19 @@
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
-import tokens from '../index.js';
+import colors from '../colors.js';
 
 <Meta title="Styleguide/Colors" />
 
 # Colors
 
 <ColorPalette>
-  {Object.keys(tokens.colors).reduce((acc, key) => {
+  {Object.keys(colors).reduce((acc, key) => {
     acc.push(
-      ...Object.keys(tokens.colors[key]).map((colorName) => {
+      ...Object.keys(colors[key]).map((colorName) => {
         return (
           <ColorItem
             key={`${key}-${colorName}`}
             title={`${key}-${colorName}`}
-            colors={[tokens.colors[key][colorName]]}
+            colors={[colors[key][colorName]]}
           />
         );
       })
