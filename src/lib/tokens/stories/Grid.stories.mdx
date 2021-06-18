@@ -161,18 +161,13 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
     args={{
       children: [
         <div className='row' key='unique'>
-          <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 first'>
-            col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
-          </div>
-          <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 second'>
-            col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
-          </div>
-          <div className='col-xs-12'>
+          <div className='col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10'>
+            outer-row: col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10
             <div className='row row-inner' key='unique'>
-              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 third'>
+              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 first'>
                 inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
               </div>
-              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 fourth'>
+              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 second'>
                 inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
               </div>
             </div>
@@ -191,13 +186,8 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
         source: {
           code: `
 <div className='row' key='unique'>
-  <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-    col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
-  </div>
-  <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
-    col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
-  </div>
-  <div className='col-xs-12'>
+  <div className='col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10'>
+    outer-row: col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10
     <div className='row row-inner' key='unique'>
       <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
         inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
