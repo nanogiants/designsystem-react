@@ -60,24 +60,24 @@ module.exports = {
   sm: {
     'typo-heading-1': {
       'font-family': 'SharpGroteskSemibold19',
+      'font-size': '3.815rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '80px',
+    },
+    'typo-heading-2': {
+      'font-family': 'SharpGroteskSemibold19',
       'font-size': '3.052rem',
       'font-weight': '600',
       'font-style': 'normal',
       'line-height': '64px',
     },
-    'typo-heading-2': {
+    'typo-heading-3': {
       'font-family': 'SharpGroteskSemibold19',
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
       'line-height': '48px',
-    },
-    'typo-heading-3': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '1.953rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '40px',
     },
     'typo-heading-4': {
       'font-family': 'SharpGroteskSemibold19',
@@ -118,31 +118,31 @@ module.exports = {
   md: {
     'typo-heading-1': {
       'font-family': 'SharpGroteskSemibold19',
+      'font-size': '4.768rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '100px',
+    },
+    'typo-heading-2': {
+      'font-family': 'SharpGroteskSemibold19',
+      'font-size': '3.815rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '80px',
+    },
+    'typo-heading-3': {
+      'font-family': 'SharpGroteskSemibold19',
       'font-size': '3.052rem',
       'font-weight': '600',
       'font-style': 'normal',
       'line-height': '64px',
     },
-    'typo-heading-2': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '2.441rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '48px',
-    },
-    'typo-heading-3': {
+    'typo-heading-4': {
       'font-family': 'SharpGroteskSemibold19',
       'font-size': '1.953rem',
       'font-weight': '600',
       'font-style': 'normal',
       'line-height': '40px',
-    },
-    'typo-heading-4': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '1.563rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '32px',
     },
     'typo-subtitle': {
       'font-family': 'SharpGroteskSemibold19',
@@ -176,31 +176,31 @@ module.exports = {
   lg: {
     'typo-heading-1': {
       'font-family': 'SharpGroteskSemibold19',
-      'font-size': '3.052rem',
+      'font-size': '5.96rem',
       'font-weight': '600',
       'font-style': 'normal',
-      'line-height': '64px',
+      'line-height': '124px',
     },
     'typo-heading-2': {
+      'font-family': 'SharpGroteskSemibold19',
+      'font-size': '4.768rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '100px',
+    },
+    'typo-heading-3': {
+      'font-family': 'SharpGroteskSemibold19',
+      'font-size': '3.815rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '80px',
+    },
+    'typo-heading-4': {
       'font-family': 'SharpGroteskSemibold19',
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
       'line-height': '48px',
-    },
-    'typo-heading-3': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '1.953rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '40px',
-    },
-    'typo-heading-4': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '1.563rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '32px',
     },
     'typo-subtitle': {
       'font-family': 'SharpGroteskSemibold19',
@@ -234,31 +234,31 @@ module.exports = {
   xl: {
     'typo-heading-1': {
       'font-family': 'SharpGroteskSemibold19',
-      'font-size': '3.052rem',
+      'font-size': '5.96rem',
       'font-weight': '600',
       'font-style': 'normal',
-      'line-height': '64px',
+      'line-height': '124px',
     },
     'typo-heading-2': {
+      'font-family': 'SharpGroteskSemibold19',
+      'font-size': '4.768rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '100px',
+    },
+    'typo-heading-3': {
+      'font-family': 'SharpGroteskSemibold19',
+      'font-size': '3.815rem',
+      'font-weight': '600',
+      'font-style': 'normal',
+      'line-height': '80px',
+    },
+    'typo-heading-4': {
       'font-family': 'SharpGroteskSemibold19',
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
       'line-height': '48px',
-    },
-    'typo-heading-3': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '1.953rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '40px',
-    },
-    'typo-heading-4': {
-      'font-family': 'SharpGroteskSemibold19',
-      'font-size': '1.563rem',
-      'font-weight': '600',
-      'font-style': 'normal',
-      'line-height': '32px',
     },
     'typo-subtitle': {
       'font-family': 'SharpGroteskSemibold19',

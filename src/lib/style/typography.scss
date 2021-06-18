@@ -2,7 +2,6 @@
   $typographymap-for-breakpoint: map-get($typography, $breakpoint-name);
   @media (min-width: $breakpoint-value) {
     @each $classname, $map in $typographymap-for-breakpoint {
-      @debug $map;
       .#{$classname} {
         @include get-map-values($map);
       }

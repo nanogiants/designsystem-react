@@ -13,7 +13,9 @@
     "lint": "eslint ./src/lib/**/*.{ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
     "postversion": "node ./bumpDistVersion && git add . && git commit -m \"Update version to $npm_package_version\"",
-    "compile-sass": "node-sass src/lib/style/index.scss src/lib/style/index.css"
+    "compile:tokens": "json-to-scss './src/lib/tokens/*.js' './src/lib/style/variables.scss'",
+    "compile:sass": "node-sass src/lib/style/index.scss src/lib/style/index.css",
+    "compile:style": "sh ./scripts/compile_style.sh"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
