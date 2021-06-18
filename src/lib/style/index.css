@@ -1,91 +1,34 @@
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-50.eot");
-  src: url("../fonts/cinderblock/cinderblock-50.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-50.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-50.woff") format("woff"), url("../fonts/cinderblock/cinderblock-50.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-50.svg#youworkforthem") format("svg");
-  font-weight: 50;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-75.eot");
-  src: url("../fonts/cinderblock/cinderblock-75.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-75.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-75.woff") format("woff"), url("../fonts/cinderblock/cinderblock-75.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-75.svg#youworkforthem") format("svg");
-  font-weight: 75;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-100.eot");
-  src: url("../fonts/cinderblock/cinderblock-100.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-100.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-100.woff") format("woff"), url("../fonts/cinderblock/cinderblock-100.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-100.svg#youworkforthem") format("svg");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-125.eot");
-  src: url("../fonts/cinderblock/cinderblock-125.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-125.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-125.woff") format("woff"), url("../fonts/cinderblock/cinderblock-125.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-125.svg#youworkforthem") format("svg");
-  font-weight: 125;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-150.eot");
-  src: url("../fonts/cinderblock/cinderblock-150.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-150.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-150.woff") format("woff"), url("../fonts/cinderblock/cinderblock-150.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-150.svg#youworkforthem") format("svg");
-  font-weight: 150;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-175.eot");
-  src: url("../fonts/cinderblock/cinderblock-175.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-175.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-175.woff") format("woff"), url("../fonts/cinderblock/cinderblock-175.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-175.svg#youworkforthem") format("svg");
-  font-weight: 175;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-200.eot");
-  src: url("../fonts/cinderblock/cinderblock-200.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-200.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-200.woff") format("woff"), url("../fonts/cinderblock/cinderblock-200.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-200.svg#youworkforthem") format("svg");
-  font-weight: 200;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Cinderblock';
-  src: url("../fonts/cinderblock/cinderblock-400.eot");
-  src: url("../fonts/cinderblock/cinderblock-400.eot?#iefix") format("embedded-opentype"), url("../fonts/cinderblock/cinderblock-400.woff2") format("woff2"), url("../fonts/cinderblock/cinderblock-400.woff") format("woff"), url("../fonts/cinderblock/cinderblock-400.ttf") format("truetype"), url("../fonts/cinderblock/cinderblock-400.svg#youworkforthem") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-
 /* ---------------- SHARP GROTESK ---------------- */
 @font-face {
   font-family: 'SharpGroteskBook19';
-  src: url("../fonts/sharpgrotesk/SharpGroteskBook19.eot");
-  src: url("../fonts/sharpgrotesk/SharpGroteskBook19.eot?#iefix") format("embedded-opentype"), url("../fonts/sharpgrotesk/SharpGroteskBook19.woff2") format("woff2"), url("../fonts/sharpgrotesk/SharpGroteskBook19.woff") format("woff"), url("../fonts/sharpgrotesk/SharpGroteskBook19.ttf") format("truetype");
-  font-weight: normal;
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskBook19.eot");
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskBook19.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/sharpgrotesk/SharpGroteskBook19.woff2") format("woff2"), url("../assets/fonts/sharpgrotesk/SharpGroteskBook19.woff") format("woff"), url("../assets/fonts/sharpgrotesk/SharpGroteskBook19.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'SharpGroteskMedium20';
-  src: url("../fonts/sharpgrotesk/SharpGroteskMedium20.eot");
-  src: url("../fonts/sharpgrotesk/SharpGroteskMedium20.eot?#iefix") format("embedded-opentype"), url("../fonts/sharpgrotesk/SharpGroteskMedium20.woff2") format("woff2"), url("../fonts/sharpgrotesk/SharpGroteskMedium20.woff") format("woff"), url("../fonts/sharpgrotesk/SharpGroteskMedium20.ttf") format("truetype");
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskMedium20.eot");
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskMedium20.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/sharpgrotesk/SharpGroteskMedium20.woff2") format("woff2"), url("../assets/fonts/sharpgrotesk/SharpGroteskMedium20.woff") format("woff"), url("../assets/fonts/sharpgrotesk/SharpGroteskMedium20.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'SharpGroteskSemibold15';
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold15.eot");
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold15.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold15.woff2") format("woff2"), url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold15.woff") format("woff"), url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold15.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'SharpGroteskSmBold15';
-  src: url("../fonts/sharpgrotesk/SharpGroteskSmBold15.eot");
-  src: url("../fonts/sharpgrotesk/SharpGroteskSmBold15.eot?#iefix") format("embedded-opentype"), url("../fonts/sharpgrotesk/SharpGroteskSmBold15.woff2") format("woff2"), url("../fonts/sharpgrotesk/SharpGroteskSmBold15.woff") format("woff"), url("../fonts/sharpgrotesk/SharpGroteskSmBold15.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'SharpGroteskSmBold19';
-  src: url("../fonts/sharpgrotesk/SharpGroteskSmBold19.eot");
-  src: url("../fonts/sharpgrotesk/SharpGroteskSmBold19.eot?#iefix") format("embedded-opentype"), url("../fonts/sharpgrotesk/SharpGroteskSmBold19.woff2") format("woff2"), url("../fonts/sharpgrotesk/SharpGroteskSmBold19.woff") format("woff"), url("../fonts/sharpgrotesk/SharpGroteskSmBold19.ttf") format("truetype");
-  font-weight: normal;
+  font-family: 'SharpGroteskSemibold19';
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold19.eot");
+  src: url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold19.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold19.woff2") format("woff2"), url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold19.woff") format("woff"), url("../assets/fonts/sharpgrotesk/SharpGroteskSemibold19.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal; }
 
 .container {
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0 auto; }
 
 @media (min-width: 0) {
   .container {
@@ -1099,11 +1042,252 @@
 :root {
   --font-sharp-grotesk: SharpGroteskBook19; }
 
-.h1 {
-  font-family: var(--font-sharp-grotesk);
-  font-size: 40px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal; }
+@media (min-width: 0) {
+  .typo-heading-1 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 3.052rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 64px; }
+  .typo-heading-2 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 2.441rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 48px; }
+  .typo-heading-3 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.953rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 40px; }
+  .typo-heading-4 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.563rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 32px; }
+  .typo-subtitle {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px; }
+  .typo-body-1 {
+    font-family: "SharpGroteskMedium20";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-body-2 {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-caption {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; } }
+
+@media (min-width: 376px) {
+  .typo-heading-1 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 64px; }
+  .typo-heading-2 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 2.441rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 48px; }
+  .typo-heading-3 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.953rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 40px; }
+  .typo-heading-4 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.563rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 32px; }
+  .typo-subtitle {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px; }
+  .typo-body-1 {
+    font-family: "SharpGroteskMedium20";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-body-2 {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-caption {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; } }
+
+@media (min-width: 577px) {
+  .typo-heading-1 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 3.052rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 64px; }
+  .typo-heading-2 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 2.441rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 48px; }
+  .typo-heading-3 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.953rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 40px; }
+  .typo-heading-4 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.563rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 32px; }
+  .typo-subtitle {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px; }
+  .typo-body-1 {
+    font-family: "SharpGroteskMedium20";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-body-2 {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-caption {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; } }
+
+@media (min-width: 769px) {
+  .typo-heading-1 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 3.052rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 64px; }
+  .typo-heading-2 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 2.441rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 48px; }
+  .typo-heading-3 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.953rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 40px; }
+  .typo-heading-4 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.563rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 32px; }
+  .typo-subtitle {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px; }
+  .typo-body-1 {
+    font-family: "SharpGroteskMedium20";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-body-2 {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-caption {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; } }
+
+@media (min-width: 1081px) {
+  .typo-heading-1 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 3.052rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 64px; }
+  .typo-heading-2 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 2.441rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 48px; }
+  .typo-heading-3 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.953rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 40px; }
+  .typo-heading-4 {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.563rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 32px; }
+  .typo-subtitle {
+    font-family: "SharpGroteskSemibold19";
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px; }
+  .typo-body-1 {
+    font-family: "SharpGroteskMedium20";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-body-2 {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; }
+  .typo-caption {
+    font-family: "SharpGroteskBook19";
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 16px; } }

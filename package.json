@@ -13,7 +13,7 @@
     "lint": "eslint ./src/lib/**/*.{ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
     "postversion": "node ./bumpDistVersion && git add . && git commit -m \"Update version to $npm_package_version\"",
-    "compile-sass": "node-sass src/lib/assets/style/index.scss src/lib/assets/style/index.css"
+    "compile-sass": "node-sass src/lib/style/index.scss src/lib/style/index.css"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
@@ -41,6 +41,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
+    "json-to-scss": "^1.6.2",
     "lint-staged": "^10.5.4",
     "node-sass": "^5.0.0",
     "react": "^16.13.1",

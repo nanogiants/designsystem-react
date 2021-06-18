@@ -1,0 +1,9 @@
+@each $breakpoint, $_ in $grid-breakpoints {
+  @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+    :root {
+      @each $spacingsize, $spacingvalue in map-get($spacings, $breakpoint) {
+        --spacing-#{$spacingsize}: #{$spacingvalue};
+      }
+    }
+  }
+}

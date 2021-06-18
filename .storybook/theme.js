@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming';
 import logo from './assets/logo.svg';
-import { colors } from '../src/lib/theme/colors';
+import tokens from '../src/lib/tokens';
 
 export default create({
   base: 'light',
@@ -10,7 +10,7 @@ export default create({
   fontBase: 'SharpGroteskBook19',
   fontCode: 'monospace',
 
-  appBg: colors.primary.white,
+  appBg: tokens.colors.primary.white,
 
-  colorSecondary: colors.primary.nanoblue,
+  colorSecondary: tokens.colors.primary.nanoblue,
 });

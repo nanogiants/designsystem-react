@@ -1,0 +1,15 @@
+:root {
+  --font-sharp-grotesk: SharpGroteskBook19;
+}
+
+@each $breakpoint, $_ in $grid-breakpoints {
+  $typographymap-for-breakpoint: map-get($typography, $breakpoint);
+  @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+    @each $classname, $map in $typographymap-for-breakpoint {
+      @debug $map;
+      .#{$classname} {
+        @include get-map-values($map);
+      }
+    }
+  }
+}
