@@ -18,7 +18,8 @@ export const parameters = {
       order: [
         `Übersicht ${version}`,
         ['Einleitung', 'Installation'],
-        'Styleguide',
+        'Tokens',
+        ['Farben', 'Typografie', 'Grid', 'Spacing'],
         'Components',
       ],
     },
