@@ -2,7 +2,10 @@ import { Meta } from '@storybook/addon-docs/blocks';
 import { App } from './Usage';
 import { version } from '../../../package.json';
 
-<Meta title={`Overview ${version}/Usage`} />
+<Meta
+  title={`Overview ${version}/Usage`}
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
 
 # Usage
 
@@ -16,7 +19,7 @@ import '../../lib/style/index.css';
 export const App = () => {
   return (
     <div style={{ backgroundColor: 'white' }}>
-      <h1 className="h1">HEADLINE</h1>
+      <h1 className='h1'>HEADLINE</h1>
     </div>
   );
 };

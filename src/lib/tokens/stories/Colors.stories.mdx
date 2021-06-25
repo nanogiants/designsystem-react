@@ -6,14 +6,17 @@ import {
 } from '@storybook/addon-docs/blocks';
 import colors from '../colors.js';
 
-<Meta title="Styleguide/Colors" />
+<Meta
+  title='Styleguide/Colors'
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
 
 # Colors
 
 ## Usage
 
 <Source
-  language="css"
+  language='css'
   code={`
 .someclass {
   color: var(--color-primary-500);
