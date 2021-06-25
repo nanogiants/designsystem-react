@@ -1,19 +1,24 @@
 .first {
-  background-color: red;
+  background-color: #19194a;
+  color: #ffffff;
+  padding-left:
 }
 .second {
-  background-color: blue;
+  background-color: #d90855;
+  color: #ffffff;
 }
 .third {
-  background-color: green;
+  background-color: #43447c;
+  color: #ffffff;
 }
 
 .fourth {
-  background-color: yellow;
+  background-color: #bebebe;
+  color: #000000;
 }
 
-.row > div {
-  height: 50px;
+.outer {
+  background-color: #dddddd;
 }
 
 .spacing {

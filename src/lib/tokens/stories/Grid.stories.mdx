@@ -1,5 +1,8 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import './Grid.stories.css';
+import colors from '../colors.js';
+import typography from '../typography.js';
+import breakpointsImage from './static/breakpoints.jpg';
 
 <Meta
   title='Tokens/Grid'
@@ -11,21 +14,45 @@ import './Grid.stories.css';
 ## Table of Contents
 
 - [Overview](#overview)
-- [Regular columns](#regular-columns)
+- [Default](#default)
 - [Offset columns](#offset-columns)
 - [Nested columns](#nested-columns)
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
 ## Overview
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<h1
+  style={{
+    color: 'white',
+    backgroundColor: colors.primary['500'],
+    padding: '20px 30px',
+    marginLeft: -30,
+    marginRight: -30,
+  }}
+>
+  Breakpoints
+</h1>
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<h2
+  style={{
+    color: colors.primary['500'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Unsere Skala
+</h2>
+
+Unsere breakpoints richten sich an den, auf dem Markt aktuell existierenden, Devices.
+Ab dem Breakpoint XL bleibt der Inhalt auf einer festen Größe. Für die anderen Breakpoints bewegt sich der Inhalt dynamisch.
+
+<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+  <img
+    src={breakpointsImage}
+    alt='Tabelle mit unseren Breakpoints für das Grid'
+    style={{ transform: 'scale(0.8)' }}
+  />
+</div>
 
 <!--- This is your Story template function, shown here in React -->
 
@@ -34,14 +61,11 @@ export const Template = (args) => {
   return <div className='container'>{children}</div>;
 };
 
-## Regular columns
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+<h2 style={{ borderBottom: 0 }}>Default</h2>
 
 <Canvas>
   <Story
-    name='Regular'
+    name='Default'
     args={{
       children: [
         <div className='row' key='unique'>
@@ -94,7 +118,10 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 
 ## Offset columns
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Columns können versetzet werden, durch die Verwendung der responsive .col-offset- grid-Klassen.Die Grid-Klassen sind so dimensioniert, dass sie zu Spalten passen, bei denen die Breite des Versatzes variabel ist.
+
+Offset-Klassen
+Mit den .col-offset-`x`-`y`-Klassen können Spalten nach rechts verschoben werden. Diese Klassen erhöhen den linken Rand einer Spalte für den Breakpoint `x` um `y` Spalten. Beispiel: .col-offset-md-4 verschiebt .col-md-4 um vier Spalten.
 
 <Canvas>
   <Story
@@ -151,9 +178,9 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ## Nested columns
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Um den Inhalt mit dem Grid zu verschachteln, wird eine neue .row und ein Satz von .col-sm-`y`-Spalten innerhalb einer vorhandenen .col-`x`-`y`-Spalte hinzugefügt.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Verschachtelte Zeilen sollten einen Satz von Spalten enthalten, die sich auf 12 oder weniger addieren (es ist nicht erforderlich, alle 12 verfügbaren Spalten zu verwenden).
 
 <Canvas>
   <Story
@@ -161,7 +188,7 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
     args={{
       children: [
         <div className='row' key='unique'>
-          <div className='col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10'>
+          <div className='col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10 outer'>
             outer-row: col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10
             <div className='row row-inner' key='unique'>
               <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 first'>
