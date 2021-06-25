@@ -1,0 +1,103 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+import colors from '../colors.js';
+
+<Meta
+  title='Styleguide/Type Scale'
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Type Scale
+
+## Table of Contents
+
+- [Overview](#overview)
+- [SharpGroteskBook19](#sharpgroteskbook19)
+- [SharpGroteskMedium20](#sharpgroteskmedium20)
+- [SharpGroteskSemibold15](#sharpgrotesksemibold15)
+- [SharpGroteskSemibold19](#sharpgrotesksemibold19)
+
+## Overview
+
+<div
+  style={{
+    color: 'white',
+    backgroundColor: colors.primary['500'],
+    padding: '20px 30px',
+    marginLeft: -30,
+    marginRight: -30,
+    marginBottom: 20,
+  }}
+>
+  <h1
+    style={{
+      color: 'white',
+    }}
+  >
+    Type Scale
+  </h1>
+  Diese Richtlinien bilden den Rahmen für die Verwendung von Typografie in unseren
+  Produkten.
+</div>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Grundlagen
+</h3>
+<p>
+  Indem wir typografische Stile konsistent mit den entsprechenden Funktionen in
+  der Benutzeroberfläche verknüpfen, erstellen wir ein klares visuelles Muster –
+  plattformübergreifend.
+</p>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Zeilenhöhe
+</h3>
+<p>
+  Die Zeilenhöhen sind in Schritten von 4px festgelegt und der Abstand zu
+  anderen Komponenten wird von den Rändern der Textfelder gemessen. So stellen
+  wir sicher dass die Typografie in unser Grid reinpasst.
+</p>
+
+## Fonts
+
+export const fontSizes = [
+  '12px',
+  '14px',
+  '16px',
+  '18px',
+  '20px',
+  '22px',
+  '24px',
+  '26px',
+  '28px',
+  '30px',
+];
+
+## SharpGroteskBook19
+
+<Typeset fontSizes={fontSizes} fontFamily={'SharpGroteskBook19'} />
+
+## SharpGroteskMedium20
+
+<Typeset fontSizes={fontSizes} fontFamily={'SharpGroteskMedium20'} />
+
+## SharpGroteskSemibold15
+
+<Typeset fontSizes={fontSizes} fontFamily={'SharpGroteskSemibold15'} />
+
+## SharpGroteskSemibold19
+
+<Typeset fontSizes={fontSizes} fontFamily={'SharpGroteskSemibold19'} />
