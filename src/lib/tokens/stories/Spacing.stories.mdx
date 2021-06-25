@@ -1,0 +1,97 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { useEffect, useState } from 'react';
+import './Spacing.stories.css';
+
+<Meta
+  title='Tokens/Spacing'
+  argTypes={{ children: { table: { disable: true } } }}
+/>
+
+# Spacing
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Usage](#usage)
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+## Overview
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+<!--- This is your Story template function, shown here in React -->
+
+export const Template = (args) => {
+  const getSpacing = () =>
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue(`--spacing-${args.size}`);
+  const [spacing, setSpacing] = useState(getSpacing());
+  const onResize = () => {
+    setSpacing(getSpacing());
+  };
+  useEffect(() => {
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+  return (
+    <div className={`spacing spacing-${args.size}`}>
+      <div className='inner'>{spacing}</div>
+    </div>
+  );
+};
+
+## Usage
+
+The spacing gets exposed as multiple css variables so you can use it
+like so in your css:
+
+```css
+.someclass {
+  padding var(-spacing-xxs);
+}
+```
+
+The following Suffixes are available:
+
+```
+['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']
+```
+
+<Canvas>
+  <Story
+    name='Regular'
+    args={{
+      size: 'xxxl',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      viewMode: 'docs',
+      docs: {
+        source: {
+          code: `
+<div className="spacing spacing-xxxl">
+  <div className="inner">
+    {' '}60px
+  </div>
+</div>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
