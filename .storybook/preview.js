@@ -16,8 +16,8 @@ export const parameters = {
   options: {
     storySort: {
       order: [
-        `Overview ${version}`,
-        ['Introduction', 'Installation', 'Usage'],
+        `Übersicht ${version}`,
+        ['Einleitung', 'Installation'],
         'Styleguide',
         'Components',
       ],
