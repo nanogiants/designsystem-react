@@ -7,10 +7,10 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
     values: [
-      { name: 'white', value: colors.primary.white },
-      { name: 'black', value: colors.primary.black },
-      { name: 'nanoblue', value: colors.primary.nanoblue },
-      { name: 'giantred', value: colors.primary.giantred },
+      { name: 'white', value: colors.basic['000'] },
+      { name: 'black', value: colors.basic['900'] },
+      { name: 'nanoblue', value: colors.primary['500'] },
+      { name: 'giantred', value: colors.secondary['500'] },
     ],
   },
   options: {

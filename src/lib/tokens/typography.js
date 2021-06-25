@@ -5,6 +5,7 @@ module.exports = {
       'font-size': '3.052rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '64px',
     },
     'typo-heading-2': {
@@ -12,6 +13,7 @@ module.exports = {
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '48px',
     },
     'typo-heading-3': {
@@ -19,6 +21,7 @@ module.exports = {
       'font-size': '1.953rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '40px',
     },
     'typo-heading-4': {
@@ -26,6 +29,7 @@ module.exports = {
       'font-size': '1.563rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '32px',
     },
     'typo-subtitle': {
@@ -33,6 +37,7 @@ module.exports = {
       'font-size': '1.25rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '20px',
     },
     'typo-body-1': {
@@ -40,6 +45,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-body-2': {
@@ -47,6 +53,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-caption': {
@@ -54,6 +61,7 @@ module.exports = {
       'font-size': '0.8rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
   },
@@ -63,6 +71,7 @@ module.exports = {
       'font-size': '3.815rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '80px',
     },
     'typo-heading-2': {
@@ -70,6 +79,7 @@ module.exports = {
       'font-size': '3.052rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '64px',
     },
     'typo-heading-3': {
@@ -77,6 +87,7 @@ module.exports = {
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '48px',
     },
     'typo-heading-4': {
@@ -84,6 +95,7 @@ module.exports = {
       'font-size': '1.563rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '32px',
     },
     'typo-subtitle': {
@@ -91,6 +103,7 @@ module.exports = {
       'font-size': '1.25rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '20px',
     },
     'typo-body-1': {
@@ -98,6 +111,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-body-2': {
@@ -105,6 +119,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-caption': {
@@ -112,6 +127,7 @@ module.exports = {
       'font-size': '0.8rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
   },
@@ -121,6 +137,7 @@ module.exports = {
       'font-size': '4.768rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '100px',
     },
     'typo-heading-2': {
@@ -128,6 +145,7 @@ module.exports = {
       'font-size': '3.815rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '80px',
     },
     'typo-heading-3': {
@@ -135,6 +153,7 @@ module.exports = {
       'font-size': '3.052rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '64px',
     },
     'typo-heading-4': {
@@ -142,6 +161,7 @@ module.exports = {
       'font-size': '1.953rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '40px',
     },
     'typo-subtitle': {
@@ -149,6 +169,7 @@ module.exports = {
       'font-size': '1.25rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '20px',
     },
     'typo-body-1': {
@@ -156,6 +177,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-body-2': {
@@ -163,6 +185,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-caption': {
@@ -170,6 +193,7 @@ module.exports = {
       'font-size': '0.8rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
   },
@@ -179,6 +203,7 @@ module.exports = {
       'font-size': '5.96rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '124px',
     },
     'typo-heading-2': {
@@ -186,6 +211,7 @@ module.exports = {
       'font-size': '4.768rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '100px',
     },
     'typo-heading-3': {
@@ -193,6 +219,7 @@ module.exports = {
       'font-size': '3.815rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '80px',
     },
     'typo-heading-4': {
@@ -200,6 +227,7 @@ module.exports = {
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '48px',
     },
     'typo-subtitle': {
@@ -207,6 +235,7 @@ module.exports = {
       'font-size': '1.25rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '20px',
     },
     'typo-body-1': {
@@ -214,6 +243,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-body-2': {
@@ -221,6 +251,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-caption': {
@@ -228,6 +259,7 @@ module.exports = {
       'font-size': '0.8rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
   },
@@ -237,6 +269,7 @@ module.exports = {
       'font-size': '5.96rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '124px',
     },
     'typo-heading-2': {
@@ -244,6 +277,7 @@ module.exports = {
       'font-size': '4.768rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '100px',
     },
     'typo-heading-3': {
@@ -251,6 +285,7 @@ module.exports = {
       'font-size': '3.815rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '80px',
     },
     'typo-heading-4': {
@@ -258,6 +293,7 @@ module.exports = {
       'font-size': '2.441rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '48px',
     },
     'typo-subtitle': {
@@ -265,6 +301,7 @@ module.exports = {
       'font-size': '1.25rem',
       'font-weight': '600',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '20px',
     },
     'typo-body-1': {
@@ -272,6 +309,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-body-2': {
@@ -279,6 +317,7 @@ module.exports = {
       'font-size': '1rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
     'typo-caption': {
@@ -286,6 +325,7 @@ module.exports = {
       'font-size': '0.8rem',
       'font-weight': '400',
       'font-style': 'normal',
+      margin: 0,
       'line-height': '16px',
     },
   },

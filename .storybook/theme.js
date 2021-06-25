@@ -10,7 +10,7 @@ export default create({
   fontBase: 'SharpGroteskBook19',
   fontCode: 'monospace',
 
-  appBg: colors.primary.white,
+  appBg: colors.basic['000'],
 
-  colorSecondary: colors.primary.nanoblue,
+  colorSecondary: colors.primary['500'],
 });

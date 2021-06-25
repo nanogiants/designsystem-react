@@ -5,7 +5,7 @@ import '../../lib/style/index.css';
 export const App = () => {
   return (
     <div style={{ backgroundColor: 'white' }}>
-      <div className="typo-heading-1">HEADLINE</div>
+      <h1 className="typo-heading-1">HEADLINE</h1>
       <div className="typo-heading-2">HEADLINE 2</div>
       <div className="typo-heading-3">HEADLINE 3</div>
       <div className="typo-heading-4">HEADLINE 4</div>

@@ -1,23 +1,43 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import {
+  Meta,
+  Source,
+  ColorPalette,
+  ColorItem,
+} from '@storybook/addon-docs/blocks';
 import colors from '../colors.js';
 
 <Meta title="Styleguide/Colors" />
 
 # Colors
 
-<ColorPalette>
-  {Object.keys(colors).reduce((acc, key) => {
-    acc.push(
-      ...Object.keys(colors[key]).map((colorName) => {
-        return (
-          <ColorItem
-            key={`${key}-${colorName}`}
-            title={`${key}-${colorName}`}
-            colors={[colors[key][colorName]]}
-          />
-        );
-      })
+## Usage
+
+<Source
+  language="css"
+  code={`
+.someclass {
+  color: var(--color-primary-500);
+}
+  `}
+/>
+
+<div>
+  {Object.keys(colors).map((key) => {
+    return (
+      <div key={`${key}`}>
+        <h2>{key}</h2>
+        <ColorPalette>
+          {Object.keys(colors[key]).map((colorName) => {
+            return (
+              <ColorItem
+                key={`${key}-${colorName}`}
+                title={`color-${key}-${colorName}`}
+                colors={[colors[key][colorName]]}
+              />
+            );
+          })}
+        </ColorPalette>
+      </div>
     );
-    return acc;
   }, [])}
-</ColorPalette>
+</div>
