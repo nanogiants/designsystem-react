@@ -45,6 +45,10 @@ export default {
           dest: './dist',
         },
         {
+          src: ['src/lib/style'],
+          dest: './dist',
+        },
+        {
           src: ['README.md'],
           dest: './dist',
         },
