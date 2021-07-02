@@ -2,7 +2,7 @@ import { Meta, Typeset, Story, Canvas } from '@storybook/addon-docs/blocks';
 import colors from '../colors.js';
 
 <Meta
-  title='Tokens/Typografie'
+  title="Tokens/Typografie"
   parameters={{ previewTabs: { canvas: { hidden: true } } }}
 />
 
@@ -70,12 +70,12 @@ import colors from '../colors.js';
 ## Heading1
 
 export const H1Template = (args) => {
-  return <h1>{args.text}</h1>;
+  return <h1 className="typo-heading-1">{args.text}</h1>;
 };
 
 <Canvas>
   <Story
-    name='Heading1'
+    name="Heading1"
     args={{
       text: 'HEADLINE',
     }}
@@ -102,12 +102,12 @@ export const H1Template = (args) => {
 ## Heading2
 
 export const H2Template = (args) => {
-  return <h2>{args.text}</h2>;
+  return <h2 className="typo-heading-2">{args.text}</h2>;
 };
 
 <Canvas>
   <Story
-    name='Heading2'
+    name="Heading2"
     args={{
       text: 'HEADLINE 2',
     }}
@@ -134,12 +134,12 @@ export const H2Template = (args) => {
 ## Heading3
 
 export const H3Template = (args) => {
-  return <h3>{args.text}</h3>;
+  return <h3 className="typo-heading-3">{args.text}</h3>;
 };
 
 <Canvas>
   <Story
-    name='Heading3'
+    name="Heading3"
     args={{
       text: 'HEADLINE 3',
     }}
@@ -166,12 +166,12 @@ export const H3Template = (args) => {
 ## Heading4
 
 export const H4Template = (args) => {
-  return <h4>{args.text}</h4>;
+  return <h4 className="typo-heading-4">{args.text}</h4>;
 };
 
 <Canvas>
   <Story
-    name='Heading4'
+    name="Heading4"
     args={{
       text: 'HEADLINE 4',
     }}
@@ -198,12 +198,12 @@ export const H4Template = (args) => {
 ## Subtitle
 
 export const SubtitleTemplate = (args) => {
-  return <div className='typo-subtitle'>{args.text}</div>;
+  return <div className="typo-subtitle">{args.text}</div>;
 };
 
 <Canvas>
   <Story
-    name='Subtitle'
+    name="Subtitle"
     args={{
       text: 'SUBTITLE',
     }}
@@ -230,12 +230,12 @@ export const SubtitleTemplate = (args) => {
 ## Body1
 
 export const Body1Template = (args) => {
-  return <div className='typo-body-1'>{args.text}</div>;
+  return <div className="typo-body-1">{args.text}</div>;
 };
 
 <Canvas>
   <Story
-    name='Body1'
+    name="Body1"
     args={{
       text: 'BODY 1',
     }}
@@ -262,12 +262,12 @@ export const Body1Template = (args) => {
 ## Body2
 
 export const Body2Template = (args) => {
-  return <div className='typo-body-2'>{args.text}</div>;
+  return <div className="typo-body-2">{args.text}</div>;
 };
 
 <Canvas>
   <Story
-    name='Body2'
+    name="Body2"
     args={{
       text: 'BODY 2',
     }}
@@ -294,12 +294,12 @@ export const Body2Template = (args) => {
 ## Caption
 
 export const CaptionTemplate = (args) => {
-  return <div className='typo-caption'>{args.text}</div>;
+  return <div className="typo-caption">{args.text}</div>;
 };
 
 <Canvas>
   <Story
-    name='Caption'
+    name="Caption"
     args={{
       text: 'CAPTION',
     }}
