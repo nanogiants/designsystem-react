@@ -1,0 +1,234 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import './Grid.stories.css';
+import colors from '../colors.js';
+import typography from '../typography.js';
+import breakpointsImage from './static/breakpoints.jpg';
+
+<Meta
+  title='Tokens/Grid'
+  argTypes={{ children: { table: { disable: true } } }}
+/>
+
+# Grid
+
+## Inhaltsverzeichnis
+
+- [Übersicht](#übersicht)
+- [Default](#default)
+- [Offset columns](#offset-columns)
+- [Nested columns](#nested-columns)
+
+## Übersicht
+
+<h1
+  style={{
+    color: 'white',
+    backgroundColor: colors.primary['500'],
+    padding: '20px 30px',
+    marginLeft: -30,
+    marginRight: -30,
+  }}
+>
+  Breakpoints
+</h1>
+
+<h2
+  style={{
+    color: colors.primary['500'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Unsere Skala
+</h2>
+
+Unsere breakpoints richten sich an den, auf dem Markt aktuell existierenden, Devices.
+Ab dem Breakpoint XL bleibt der Inhalt auf einer festen Größe. Für die anderen Breakpoints bewegt sich der Inhalt dynamisch.
+
+<div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+  <img
+    src={breakpointsImage}
+    alt='Tabelle mit unseren Breakpoints für das Grid'
+    style={{ transform: 'scale(0.8)' }}
+  />
+</div>
+
+<!--- This is your Story template function, shown here in React -->
+
+export const Template = (args) => {
+  const { children } = args;
+  return <div className='container'>{children}</div>;
+};
+
+<h2 style={{ borderBottom: 0 }}>Default</h2>
+
+<Canvas>
+  <Story
+    name='Default'
+    args={{
+      children: [
+        <div className='row' key='unique'>
+          <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 first'>
+            col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+          </div>
+          <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 second'>
+            col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+          </div>
+          <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 third'>
+            col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+          </div>
+          <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 fourth'>
+            col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+          </div>
+        </div>,
+      ],
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      viewMode: 'docs',
+      docs: {
+        source: {
+          code: `
+<div className='row' key='unique'>
+  <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3'>
+    col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+  </div>
+  <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3'>
+    col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+  </div>
+  <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3'>
+    col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+  </div>
+  <div className='col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3'>
+    col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
+  </div>
+</div>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Offset columns
+
+Columns können versetzet werden, durch die Verwendung der responsive .col-offset- grid-Klassen.Die Grid-Klassen sind so dimensioniert, dass sie zu Spalten passen, bei denen die Breite des Versatzes variabel ist.
+
+Offset-Klassen
+Mit den .col-offset-`x`-`y`-Klassen können Spalten nach rechts verschoben werden. Diese Klassen erhöhen den linken Rand einer Spalte für den Breakpoint `x` um `y` Spalten. Beispiel: .col-offset-md-4 verschiebt .col-md-4 um vier Spalten.
+
+<Canvas>
+  <Story
+    name='Offset'
+    args={{
+      children: [
+        <div className='row' key='unique'>
+          <div className='col-offset-xs-2 col-offset-lg-0 col-xs-10 col-lg-12 first'>
+            col-offset-xs-2 col-offset-lg-0 col-xs-10 col-lg-12
+          </div>
+          <div className='col-offset-xs-3 col-offset-lg-1 col-xs-9 col-lg-11 second'>
+            col-offset-xs-3 col-offset-lg-1 col-xs-9 col-lg-11
+          </div>
+          <div className='col-offset-xs-4 col-offset-lg-2 col-xs-8 col-lg-10 third'>
+            col-offset-xs-4 col-offset-lg-2 col-xs-8 col-lg-10
+          </div>
+          <div className='col-offset-xs-5 col-offset-lg-3 col-xs-7 col-lg-9 fourth'>
+            col-offset-xs-5 col-offset-lg-3 col-xs-7 col-lg-9
+          </div>
+        </div>,
+      ],
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      viewMode: 'docs',
+      docs: {
+        source: {
+          code: `
+<div className='row' key='unique'>
+  <div className='col-offset-xs-2 col-offset-lg-0 col-xs-10 col-lg-12'>
+    col-offset-xs-2 col-offset-lg-0 col-xs-10 col-lg-12
+  </div>
+  <div className='col-offset-xs-3 col-offset-lg-1 col-xs-9 col-lg-11'>
+    col-offset-xs-3 col-offset-lg-1 col-xs-9 col-lg-11
+  </div>
+  <div className='col-offset-xs-4 col-offset-lg-2 col-xs-8 col-lg-10'>
+    col-offset-xs-4 col-offset-lg-2 col-xs-8 col-lg-10
+  </div>
+  <div className='col-offset-xs-5 col-offset-lg-3 col-xs-7 col-lg-9'>
+    col-offset-xs-5 col-offset-lg-3 col-xs-7 col-lg-9
+  </div>
+</div>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Nested columns
+
+Um den Inhalt mit dem Grid zu verschachteln, wird eine neue .row und ein Satz von .col-sm-`y`-Spalten innerhalb einer vorhandenen .col-`x`-`y`-Spalte hinzugefügt.
+
+Verschachtelte Zeilen sollten einen Satz von Spalten enthalten, die sich auf 12 oder weniger addieren (es ist nicht erforderlich, alle 12 verfügbaren Spalten zu verwenden).
+
+<Canvas>
+  <Story
+    name='Nested'
+    args={{
+      children: [
+        <div className='row' key='unique'>
+          <div className='col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10 outer'>
+            outer-row: col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10
+            <div className='row row-inner' key='unique'>
+              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 first'>
+                inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
+              </div>
+              <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 second'>
+                inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
+              </div>
+            </div>
+          </div>
+        </div>,
+      ],
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      viewMode: 'docs',
+      docs: {
+        source: {
+          code: `
+<div className='row' key='unique'>
+  <div className='col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10'>
+    outer-row: col-xs-10 col-sm-9 col-md-8 col-lg-9 col-xl-10
+    <div className='row row-inner' key='unique'>
+      <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
+        inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
+      </div>
+      <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6'>
+        inner-row: col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6
+      </div>
+    </div>
+  </div>
+</div>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

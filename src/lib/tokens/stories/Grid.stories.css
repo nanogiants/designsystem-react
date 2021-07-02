@@ -1,0 +1,26 @@
+.first {
+  background-color: #19194a;
+  color: #ffffff;
+  padding-left:
+}
+.second {
+  background-color: #d90855;
+  color: #ffffff;
+}
+.third {
+  background-color: #43447c;
+  color: #ffffff;
+}
+
+.fourth {
+  background-color: #bebebe;
+  color: #000000;
+}
+
+.outer {
+  background-color: #dddddd;
+}
+
+.spacing {
+  margin: var(--spacing-xxl);
+}

@@ -1,0 +1,324 @@
+import { Meta, Typeset, Story, Canvas } from '@storybook/addon-docs/blocks';
+import colors from '../colors.js';
+
+<Meta
+  title="Tokens/Typografie"
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Type Scale
+
+## Inhaltsverzeichnis
+
+- [Übersicht](#übersicht)
+
+## Übersicht
+
+<div
+  style={{
+    color: 'white',
+    backgroundColor: colors.primary['500'],
+    padding: '20px 30px',
+    marginLeft: -30,
+    marginRight: -30,
+    marginBottom: 20,
+  }}
+>
+  <h1
+    style={{
+      color: 'white',
+    }}
+  >
+    Type Scale
+  </h1>
+  Diese Richtlinien bilden den Rahmen für die Verwendung von Typografie in unseren
+  Produkten.
+</div>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Grundlagen
+</h3>
+<p>
+  Indem wir typografische Stile konsistent mit den entsprechenden Funktionen in
+  der Benutzeroberfläche verknüpfen, erstellen wir ein klares visuelles Muster –
+  plattformübergreifend.
+</p>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Zeilenhöhe
+</h3>
+<p>
+  Die Zeilenhöhen sind in Schritten von 4px festgelegt und der Abstand zu
+  anderen Komponenten wird von den Rändern der Textfelder gemessen. So stellen
+  wir sicher dass die Typografie in unser Grid reinpasst.
+</p>
+
+## Heading1
+
+export const H1Template = (args) => {
+  return <h1 className="typo-heading-1">{args.text}</h1>;
+};
+
+<Canvas>
+  <Story
+    name="Heading1"
+    args={{
+      text: 'HEADLINE',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<h1 className="typo-heading-1">
+  HEADLINE
+</h1>`,
+        },
+      },
+    }}
+  >
+    {H1Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading2
+
+export const H2Template = (args) => {
+  return <h2 className="typo-heading-2">{args.text}</h2>;
+};
+
+<Canvas>
+  <Story
+    name="Heading2"
+    args={{
+      text: 'HEADLINE 2',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<h2 className="typo-heading-2">
+  HEADLINE 2
+</h2>`,
+        },
+      },
+    }}
+  >
+    {H2Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading3
+
+export const H3Template = (args) => {
+  return <h3 className="typo-heading-3">{args.text}</h3>;
+};
+
+<Canvas>
+  <Story
+    name="Heading3"
+    args={{
+      text: 'HEADLINE 3',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<h3 className="typo-heading-3">
+  HEADLINE 3
+</h3>`,
+        },
+      },
+    }}
+  >
+    {H3Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading4
+
+export const H4Template = (args) => {
+  return <h4 className="typo-heading-4">{args.text}</h4>;
+};
+
+<Canvas>
+  <Story
+    name="Heading4"
+    args={{
+      text: 'HEADLINE 4',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<h4 className="typo-heading-4">
+  HEADLINE 4
+</h4>`,
+        },
+      },
+    }}
+  >
+    {H4Template.bind({})}
+  </Story>
+</Canvas>
+
+## Subtitle
+
+export const SubtitleTemplate = (args) => {
+  return <div className="typo-subtitle">{args.text}</div>;
+};
+
+<Canvas>
+  <Story
+    name="Subtitle"
+    args={{
+      text: 'SUBTITLE',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<div className="typo-subtitle">
+  SUBTITLE
+</div>`,
+        },
+      },
+    }}
+  >
+    {SubtitleTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## Body1
+
+export const Body1Template = (args) => {
+  return <div className="typo-body-1">{args.text}</div>;
+};
+
+<Canvas>
+  <Story
+    name="Body1"
+    args={{
+      text: 'BODY 1',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<div className='typo-body-1'>
+  BODY 1
+</div>`,
+        },
+      },
+    }}
+  >
+    {Body1Template.bind({})}
+  </Story>
+</Canvas>
+
+## Body2
+
+export const Body2Template = (args) => {
+  return <div className="typo-body-2">{args.text}</div>;
+};
+
+<Canvas>
+  <Story
+    name="Body2"
+    args={{
+      text: 'BODY 2',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<div className='typo-body-2'>
+  BODY 2
+</div>`,
+        },
+      },
+    }}
+  >
+    {Body2Template.bind({})}
+  </Story>
+</Canvas>
+
+## Caption
+
+export const CaptionTemplate = (args) => {
+  return <div className="typo-caption">{args.text}</div>;
+};
+
+<Canvas>
+  <Story
+    name="Caption"
+    args={{
+      text: 'CAPTION',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      docs: {
+        source: {
+          code: `
+<div className='typo-caption'>
+  CAPTION
+</div>`,
+        },
+      },
+    }}
+  >
+    {CaptionTemplate.bind({})}
+  </Story>
+</Canvas>
