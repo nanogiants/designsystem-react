@@ -1,0 +1,137 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { useEffect, useState } from 'react';
+import './Spacing.stories.css';
+import colors from '../colors.js';
+
+<Meta
+  title='Tokens/Spacing'
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+  argTypes={{ children: { table: { disable: true } } }}
+/>
+
+# Spacing
+
+## Inhaltsverzeichnis
+
+- [Übersicht](#übersicht)
+- [Verwendung](#verwendung)
+
+## Übersicht
+
+<div
+  style={{
+    color: 'white',
+    backgroundColor: colors.primary['500'],
+    padding: '20px 30px',
+    marginLeft: -30,
+    marginRight: -30,
+    marginBottom: 20,
+  }}
+>
+  <h1
+    style={{
+      color: 'white',
+    }}
+  >
+    Spacing
+  </h1>
+  Spacing hilft Konsistenz in der Gestaltung zu gewährleisten. Unser Spacing System
+  ist dynamisch aufgesetzt, um auf unsere Breakpoints zu reagieren.
+</div>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Foundations
+</h3>
+
+Unser Design System baut auf einem 4px Spacing System auf. Wir haben dies als einprägsame Basiszahl definiert, um räumliche Werte festzulegen, die von jeder Komponente verwendet werden. Durch das Befolgen einer festgelegten räumlichen Konvention verringern wir die Designkomplexität und erhöhen gleichzeitig die Konsistenz in der gesamten Anwendung.
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Spacing Matrix
+</h3>
+
+Unser Spacing System ist dynamisch aufgesetzt um auf die Breakpoints zu reagieren. Die Spacings sind auch mit einer Bennenung (z.B. L, XL, S) versehen um als Design Tokens eingepflegt zu werden.
+
+<!--- This is your Story template function, shown here in React -->
+
+export const Template = (args) => {
+  const getSpacing = () =>
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue(`--spacing-${args.size}`);
+  const [spacing, setSpacing] = useState(getSpacing());
+  const onResize = () => {
+    setSpacing(getSpacing());
+  };
+  useEffect(() => {
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+  return (
+    <div className={`spacing spacing-${args.size}`}>
+      <div className='inner'>{spacing}</div>
+    </div>
+  );
+};
+
+## Verwendung
+
+Alle Abstände stehen als CSS Variablen zur Verfügung und können über den Identifier »--spacing-`suffix`« eingebunden werden.
+
+Die folgenden Suffixe sind verfügbar:
+
+```
+['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']
+```
+
+Beispiel:
+
+```css
+.someclass {
+  padding: var(--spacing-xxs);
+}
+```
+
+<Canvas>
+  <Story
+    name='Spacing'
+    args={{
+      size: 'xxxl',
+    }}
+    parameters={{
+      previewTabs: {
+        canvas: {
+          hidden: true,
+        },
+      },
+      viewMode: 'docs',
+      docs: {
+        source: {
+          code: `
+<div className="spacing spacing-xxxl">
+  <div className="inner">
+    {' '}60px
+  </div>
+</div>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

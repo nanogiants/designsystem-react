@@ -1,0 +1,116 @@
+import {
+  Meta,
+  Source,
+  ColorPalette,
+  ColorItem,
+} from '@storybook/addon-docs/blocks';
+import colors from '../colors.js';
+
+<Meta
+  title='Tokens/Farben'
+  parameters={{ previewTabs: { canvas: { hidden: true } } }}
+/>
+
+# Colors
+
+## Inhaltsverzeichnis
+
+- [Übersicht](#übersicht)
+- [Verwendung](#verwendung)
+
+## Übersicht
+
+<div
+  style={{
+    color: 'white',
+    backgroundColor: colors.primary['500'],
+    padding: '20px 30px',
+    marginLeft: -30,
+    marginRight: -30,
+    marginBottom: 20,
+  }}
+>
+  <h1
+    style={{
+      color: 'white',
+    }}
+  >
+    Farbwelt
+  </h1>
+  Eine konsequente und ausbalancierte Verwendung der Farben sorgt für einen hohen
+  Wiedererkennungswert und einen selbstbewussten, dynamischen Farbeindruck.
+</div>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Foundations
+</h3>
+<p>
+  Die Hauptfarbe des NanoGiants Erscheinungsbilds ist »primary 500«. Diese Farbe
+  sollte den Hauptanteil bei der Verwendung von Farbe einnehmen. »accent 500«
+  ist eine Akzentfarbe, die in erster Linie zum Hervorheben von Inhalten gedacht
+  ist. Die Abstufungen (700, 600 und 400) der Farbe sind für die korrekte
+  Gestaltung von Komponenten mit mehreren States, sowie Buttons.
+</p>
+<p>
+  Dazu kommen noch unsere »basic« Farben, die eine Farbskala von schwarz bis
+  weiß mit 8 Abstufungen vorgibt. Diese können als Hintergründe, Ränder und
+  Schatten verwendet werden, um bestimmte Bereiche zu betonen oder abzusetzen.
+</p>
+
+<h3
+  style={{
+    color: colors.basic['900'],
+    fontWeight: 900,
+    borderBottom: 0,
+    paddingBottom: 0,
+  }}
+>
+  Semantics
+</h3>
+<p>
+  Die semantischen Farben sind ausschließlich für Meldungen zu verwenden. Sie
+  sind nach der Nutzung benannt für die sie eingesetzt werden.
+</p>
+
+## Verwendung
+
+Alle Farbwerte stehen als CSS Variablen zur Verfügung und können über den Namen eingebunden werden.
+
+Beispiel:
+
+<Source
+  language='css'
+  code={`
+.someclass {
+  color: var(--color-primary-500);
+}
+  `}
+/>
+
+<div>
+  {Object.keys(colors).map((key) => {
+    return (
+      <div key={`${key}`}>
+        <h2>{key}</h2>
+        <ColorPalette>
+          {Object.keys(colors[key]).map((colorName) => {
+            return (
+              <ColorItem
+                key={`${key}-${colorName}`}
+                title={`color-${key}-${colorName}`}
+                colors={[colors[key][colorName]]}
+              />
+            );
+          })}
+        </ColorPalette>
+      </div>
+    );
+  }, [])}
+</div>

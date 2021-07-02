@@ -1,0 +1,15 @@
+:root {
+  @each $color-type, $color-type-values in $colors {
+    @each $color-name, $color-value in $color-type-values {
+      $used-color-name: #{$color-name};
+      @debug str-length($used-color-name);
+      @if (str-length($used-color-name) == 2) {
+        $used-color-name: str-insert($used-color-name, '0', 0);
+      }
+      @if (str-length($used-color-name) == 1) {
+        $used-color-name: str-insert($used-color-name, '00', 0);
+      }
+      --color-#{$color-type}-#{$used-color-name}: #{$color-value};
+    }
+  }
+}

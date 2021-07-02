@@ -1,0 +1,445 @@
+//FILE GETS AUTO GENERATED - DO NOT EDIT MANUALLY
+$breakpoints: (
+  xs: 0,
+  sm: 376px,
+  md: 577px,
+  lg: 769px,
+  xl: 1081px
+);
+$colors: (
+  primary: (
+    400: #43447C,
+    500: #19194A,
+    600: #100F39,
+    700: #07061C
+  ),
+  secondary: (
+    400: #E7799A,
+    500: #D90855,
+    600: #C6004C,
+    700: #A5003F
+  ),
+  basic: (
+    100: #F1F1F1,
+    200: #EAEAEA,
+    300: #DDDDDD,
+    400: #BEBEBE,
+    500: #7B7B7B,
+    900: #282828,
+    000: #FFFFFF,
+    050: #F6F6F6
+  ),
+  positive: (
+    100: #CCF4E1,
+    500: #0DB163,
+    600: #095B34
+  ),
+  warning: (
+    100: #F9E7D2,
+    500: #ED9733,
+    600: #915D0E
+  ),
+  negative: (
+    100: #F7D4D8,
+    500: #E45969,
+    600: #A41727
+  )
+);
+$container-max-widths: (
+  xs: 343px,
+  sm: 536px,
+  md: 704px,
+  lg: 1000px,
+  xl: 1004px
+);
+$grid-gutter-widths: (
+  xs: 8px,
+  sm: 16px,
+  md: 20px,
+  lg: 24px,
+  xl: 28px
+);
+$spacings: (
+  xs: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 36px,
+    xxxl: 40px
+  ),
+  sm: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 36px,
+    xxxl: 40px
+  ),
+  md: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 36px,
+    xxxl: 48px
+  ),
+  lg: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 40px,
+    xxxl: 60px
+  ),
+  xl: (
+    xxs: 4px,
+    xs: 8px,
+    s: 12px,
+    m: 16px,
+    l: 24px,
+    xl: 28px,
+    xxl: 40px,
+    xxxl: 60px
+  )
+);
+$typography: (
+  xs: (
+    typo-heading-1: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.052rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 64px
+    ),
+    typo-heading-2: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 2.441rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 48px
+    ),
+    typo-heading-3: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.953rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 40px
+    ),
+    typo-heading-4: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.563rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 32px
+    ),
+    typo-subtitle: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.25rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 20px
+    ),
+    typo-body-1: (
+      font-family: "SharpGroteskMedium20",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-body-2: (
+      font-family: "SharpGroteskBook19",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-caption: (
+      font-family: "SharpGroteskBook19",
+      font-size: 0.8rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    )
+  ),
+  sm: (
+    typo-heading-1: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.815rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 80px
+    ),
+    typo-heading-2: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.052rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 64px
+    ),
+    typo-heading-3: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 2.441rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 48px
+    ),
+    typo-heading-4: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.563rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 32px
+    ),
+    typo-subtitle: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.25rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 20px
+    ),
+    typo-body-1: (
+      font-family: "SharpGroteskMedium20",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-body-2: (
+      font-family: "SharpGroteskBook19",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-caption: (
+      font-family: "SharpGroteskBook19",
+      font-size: 0.8rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    )
+  ),
+  md: (
+    typo-heading-1: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 4.768rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 100px
+    ),
+    typo-heading-2: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.815rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 80px
+    ),
+    typo-heading-3: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.052rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 64px
+    ),
+    typo-heading-4: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.953rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 40px
+    ),
+    typo-subtitle: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.25rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 20px
+    ),
+    typo-body-1: (
+      font-family: "SharpGroteskMedium20",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-body-2: (
+      font-family: "SharpGroteskBook19",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-caption: (
+      font-family: "SharpGroteskBook19",
+      font-size: 0.8rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    )
+  ),
+  lg: (
+    typo-heading-1: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 5.96rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 124px
+    ),
+    typo-heading-2: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 4.768rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 100px
+    ),
+    typo-heading-3: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.815rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 80px
+    ),
+    typo-heading-4: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 2.441rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 48px
+    ),
+    typo-subtitle: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.25rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 20px
+    ),
+    typo-body-1: (
+      font-family: "SharpGroteskMedium20",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-body-2: (
+      font-family: "SharpGroteskBook19",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-caption: (
+      font-family: "SharpGroteskBook19",
+      font-size: 0.8rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    )
+  ),
+  xl: (
+    typo-heading-1: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 5.96rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 124px
+    ),
+    typo-heading-2: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 4.768rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 100px
+    ),
+    typo-heading-3: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 3.815rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 80px
+    ),
+    typo-heading-4: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 2.441rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 48px
+    ),
+    typo-subtitle: (
+      font-family: "SharpGroteskSemibold19",
+      font-size: 1.25rem,
+      font-weight: 600,
+      font-style: normal,
+      margin: 0,
+      line-height: 20px
+    ),
+    typo-body-1: (
+      font-family: "SharpGroteskMedium20",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-body-2: (
+      font-family: "SharpGroteskBook19",
+      font-size: 1rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    ),
+    typo-caption: (
+      font-family: "SharpGroteskBook19",
+      font-size: 0.8rem,
+      font-weight: 400,
+      font-style: normal,
+      margin: 0,
+      line-height: 16px
+    )
+  )
+);
